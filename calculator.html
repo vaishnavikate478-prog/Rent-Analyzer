@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rent Calculator</title>
+
+    <link rel="stylesheet" href="calculator.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo-area">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-house"></i>
+        </div>
+
+        <div class="logo-text">
+            <h2>Rent Analyzer</h2>
+            <p>Smart Rent Planning</p>
+        </div>
+
+    </div>
+
+    <div class="nav-links">
+
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </a>
+
+        <a href="calculator.html" class="active">
+            <i class="fa-solid fa-calculator"></i>
+            Calculator
+        </a>
+
+        <a href="analyzer.html">
+            <i class="fa-solid fa-chart-column"></i>
+            Analyzer
+        </a>
+
+        <a href="history.html">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            History
+        </a>
+
+        <a href="profile.html">
+            <i class="fa-solid fa-user"></i>
+            Profile
+        </a>
+
+        <a href="login.html" class="login-btn">
+            Login
+        </a>
+
+        <a href="register.html" class="register-btn">
+            Register
+        </a>
+
+    </div>
+
+</nav>
+
+
+<main class="calculator-page">
+
+    <div class="breadcrumb">
+
+        <a href="index.html">Home</a>
+
+        <span>/</span>
+
+        Calculator
+
+    </div>
+
+
+    <div class="calculator-heading">
+
+        <div class="heading-text">
+
+            <h1>
+                Rent <span>Calculator</span>
+            </h1>
+
+            <p>
+                Enter your rent details to calculate monthly
+                and yearly costs.
+            </p>
+
+        </div>
+
+        <div class="calculator-image">
+
+            <img src="calculator.jpeg"
+                 alt="House and Calculator">
+
+        </div>
+
+    </div>
+
+
+    <div class="calculator-card">
+
+
+        <!-- PROPERTY DETAILS -->
+
+        <section class="calculator-section">
+
+            <h3 class="section-heading">
+
+                <i class="fa-regular fa-calendar-days"></i>
+
+                1. Property Details
+
+            </h3>
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Monthly Rent (Basic)
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span>₹</span>
+
+                        <input
+                            type="number"
+                            id="monthlyRent"
+                            placeholder="Enter monthly rent">
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Security Deposit
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span>₹</span>
+
+                        <input
+                            type="number"
+                            id="securityDeposit"
+                            placeholder="Enter security deposit">
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Brokerage (One-time)
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span>₹</span>
+
+                        <input
+                            type="number"
+                            id="brokerage"
+                            placeholder="Enter brokerage amount">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ADDITIONAL CHARGES -->
+
+        <section class="calculator-section">
+
+            <h3 class="section-heading">
+
+                <i class="fa-regular fa-face-smile"></i>
+
+                2. Additional Monthly Charges
+
+            </h3>
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Maintenance
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span>₹</span>
+
+                        <input
+                            type="number"
+                            id="maintenance"
+                            placeholder="Enter amount">
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Parking
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span>₹</span>
+
+                        <input
+                            type="number"
+                            id="parking"
+                            placeholder="Enter amount">
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Utilities (Electricity, Water, Gas)
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span>₹</span>
+
+                        <input
+                            type="number"
+                            id="utilities"
+                            placeholder="Enter amount">
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Internet / Wi-Fi
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span>₹</span>
+
+                        <input
+                            type="number"
+                            id="internet"
+                            placeholder="Enter amount">
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Others
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span>₹</span>
+
+                        <input
+                            type="number"
+                            id="others"
+                            placeholder="Enter amount">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INCOME -->
+
+        <section class="calculator-section income-section">
+
+            <h3 class="section-heading">
+
+                <i class="fa-regular fa-file-lines"></i>
+
+                3. Income Details
+
+            </h3>
+
+
+            <div class="income-input">
+
+                <div class="form-group">
+
+                    <label>
+                        Monthly Income (After Tax)
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span>₹</span>
+
+                        <input
+                            type="number"
+                            id="monthlyIncome"
+                            placeholder="Enter your monthly income">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="tip-box">
+
+                <div class="tip-icon">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                </div>
+
+                <p>
+
+                    <b>Tip:</b>
+
+                    Experts suggest that your total rent
+                    (including all monthly costs) should be
+                    less than 30% of your monthly income.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- BUTTONS -->
+
+        <div class="calculator-buttons">
+
+            <button
+                type="button"
+                class="reset-button"
+                onclick="resetCalculator()">
+
+                <i class="fa-solid fa-rotate"></i>
+
+                Reset
+
+            </button>
+
+
+            <button
+                type="button"
+                class="calculate-button"
+                onclick="calculateRent()">
+
+                <i class="fa-solid fa-calculator"></i>
+
+                Calculate
+
+            </button>
+
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div id="resultBox" class="result-box">
+
+            <h3>Calculation Result</h3>
+
+
+            <div class="result-row">
+
+                <span>Monthly Total</span>
+
+                <strong id="monthlyResult">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="result-row">
+
+                <span>Yearly Total</span>
+
+                <strong id="yearlyResult">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="result-row">
+
+                <span>Income Percentage</span>
+
+                <strong id="percentageResult">
+                    0%
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+
+            <div class="footer-brand">
+
+                <div class="footer-house">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+
+                <div>
+
+                    <h3>Rent Analyzer</h3>
+
+                    <p>Smart Rent Planning</p>
+
+                </div>
+
+            </div>
+
+            <span>
+                Plan your rent better, understand
+                your expenses and live smarter.
+            </span>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Quick Links</h4>
+
+            <a href="index.html">Home</a>
+
+            <a href="calculator.html">Calculator</a>
+
+            <a href="analyzer.html">Analyzer</a>
+
+            <a href="history.html">History</a>
+
+            <a href="profile.html">Profile</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Useful</h4>
+
+            <a href="#">About Us</a>
+
+            <a href="#">How It Works</a>
+
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Terms & Conditions</a>
+
+            <a href="#">Contact Us</a>
+
+        </div>
+
+
+        <div class="plan-box">
+
+            <h3>
+                Plan Better. Spend Smart.
+            </h3>
+
+            <p>
+                Make informed rental decisions
+                and manage your budget wisely.
+            </p>
+
+            <i class="fa-solid fa-house plan-icon"></i>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2024 Rent Analyzer. All rights reserved.
+
+    </div>
+
+</footer>
+
+
+<script>
+
+function calculateRent() {
+
+    /* ==============================
+       GET VALUES FROM INPUTS
+    ============================== */
+
+    let rent =
+        Number(document.getElementById("monthlyRent").value) || 0;
+
+    let securityDeposit =
+        Number(document.getElementById("securityDeposit").value) || 0;
+
+    let brokerage =
+        Number(document.getElementById("brokerage").value) || 0;
+
+    let maintenance =
+        Number(document.getElementById("maintenance").value) || 0;
+
+    let parking =
+        Number(document.getElementById("parking").value) || 0;
+
+    let utilities =
+        Number(document.getElementById("utilities").value) || 0;
+
+    let internet =
+        Number(document.getElementById("internet").value) || 0;
+
+    let others =
+        Number(document.getElementById("others").value) || 0;
+
+    let income =
+        Number(document.getElementById("monthlyIncome").value) || 0;
+
+
+    /* ==============================
+       CALCULATE MONTHLY TOTAL
+    ============================== */
+
+    let monthlyTotal =
+        rent +
+        maintenance +
+        parking +
+        utilities +
+        internet +
+        others;
+
+
+    /* ==============================
+       YEARLY MONTHLY COST
+    ============================== */
+
+    let yearlyTotal =
+        monthlyTotal * 12;
+
+
+    /* ==============================
+       RENT PERCENTAGE
+    ============================== */
+
+    let percentage = 0;
+
+    if (income > 0) {
+
+        percentage =
+            (monthlyTotal / income) * 100;
+
+    }
+
+
+    /* ==============================
+       SHOW RESULT ON CALCULATOR
+    ============================== */
+
+    document.getElementById("monthlyResult").innerText =
+        "₹" + monthlyTotal.toLocaleString("en-IN");
+
+
+    document.getElementById("yearlyResult").innerText =
+        "₹" + yearlyTotal.toLocaleString("en-IN");
+
+
+    document.getElementById("percentageResult").innerText =
+        percentage.toFixed(1) + "%";
+
+
+    document.getElementById("resultBox").style.display =
+        "block";
+
+
+    /* =================================================
+       SAVE ALL VALUES FOR ANALYZER PAGE
+    ================================================= */
+
+    const rentData = {
+
+        monthlyRent: rent,
+
+        securityDeposit: securityDeposit,
+
+        brokerage: brokerage,
+
+        maintenance: maintenance,
+
+        parking: parking,
+
+        utilities: utilities,
+
+        internet: internet,
+
+        others: others,
+
+        monthlyIncome: income,
+
+        monthlyTotal: monthlyTotal,
+
+        yearlyTotal: yearlyTotal,
+
+        percentage: percentage
+
+    };
+
+
+    /* SAVE DATA */
+
+    localStorage.setItem(
+        "rentAnalyzerData",
+        JSON.stringify(rentData)
+    );
+
+
+    /* =================================================
+       OPEN ANALYZER PAGE
+    ================================================= */
+
+    window.location.href = "analyzer.html";
+
+}
+
+
+
+function resetCalculator() {
+
+    document
+        .querySelectorAll("input")
+        .forEach(function(input) {
+
+            input.value = "";
+
+        });
+
+
+    document.getElementById("resultBox").style.display =
+        "none";
+
+
+    /* Remove old saved data */
+
+    localStorage.removeItem("rentAnalyzerData");
+
+}
+
+</script>
+
+
+</body>
+
+</html>

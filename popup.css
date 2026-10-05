@@ -1,0 +1,327 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* Dark overlay */
+
+.login-overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.60);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+
+/* Popup */
+
+.login-popup {
+    width: 420px;
+
+    background: white;
+
+    padding: 32px;
+
+    border-radius: 18px;
+
+    position: relative;
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.30);
+
+    animation: popup 0.3s ease;
+}
+
+
+/* Popup Animation */
+
+@keyframes popup {
+
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* Close Button */
+
+.close-btn {
+
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 28px;
+
+    color: #777;
+
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+
+/* Header */
+
+.login-header {
+    text-align: center;
+
+    margin-bottom: 22px;
+}
+
+.login-header h1 {
+
+    color: #263b5b;
+
+    font-size: 27px;
+
+    margin-bottom: 5px;
+}
+
+.login-header p {
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* Welcome */
+
+.login-popup h2 {
+
+    color: #263b5b;
+
+    font-size: 22px;
+
+    margin-bottom: 6px;
+}
+
+.welcome-text {
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 22px;
+}
+
+
+/* Labels */
+
+.login-popup > label {
+
+    display: block;
+
+    color: #333;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-top: 15px;
+
+    margin-bottom: 7px;
+}
+
+
+/* Tenant / Landlord */
+
+.role-selection {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+.role-btn {
+
+    width: 50%;
+
+    padding: 12px;
+
+    background: white;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.role-btn.active {
+
+    background: #4f55c7;
+
+    color: white;
+
+    border-color: #4f55c7;
+}
+
+.role-btn:hover {
+
+    border-color: #4f55c7;
+}
+
+
+/* Inputs */
+
+.login-popup input[type="email"],
+.login-popup input[type="password"] {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+.login-popup input:focus {
+
+    border-color: #4f55c7;
+}
+
+
+/* Options */
+
+.login-options {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 15px 0 20px;
+
+    font-size: 13px;
+}
+
+.remember {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #666;
+}
+
+.remember input {
+
+    width: auto;
+}
+
+.login-options a {
+
+    color: #4f55c7;
+
+    text-decoration: none;
+}
+
+
+/* Login Button */
+
+.login-button {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #4f55c7;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.login-button:hover {
+
+    background: #3e44ae;
+}
+
+
+/* Register */
+
+.register-text {
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin-top: 20px;
+}
+
+.register-text a {
+
+    color: #4f55c7;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .login-popup {
+
+        width: calc(100% - 30px);
+
+        padding: 25px;
+    }
+
+}

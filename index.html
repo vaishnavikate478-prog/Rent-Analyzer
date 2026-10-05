@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rent Analyzer - Smart Rent Planning</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo-section">
+        <div class="logo">
+            <i class="fa-solid fa-house"></i>
+        </div>
+
+        <div>
+            <h2>Rent Analyzer</h2>
+            <span>Smart Rent Planning</span>
+        </div>
+    </div>
+
+    <nav>
+        <a href="index.html" class="active">
+            <i class="fa-solid fa-house"></i> Home
+        </a>
+
+        <a href="calculator.html">
+            <i class="fa-solid fa-calculator"></i>
+             Calculator
+</a>
+
+       <a href="analyzer.html" class="btn">
+    Analyze Rent
+</a>
+
+        <a href="history.html">
+            <i class="fa-solid fa-clock-rotate-left"></i> History
+        </a>
+
+        <a href="profile.html">
+            <i class="fa-solid fa-user"></i> Profile
+        </a>
+        <a href="register.html" class="menu-item">
+                <i data-lucide="register"></i>
+                register
+            </a>
+    </nav>
+
+    <div class="auth-buttons">
+
+    <button class="login"
+            onclick="window.location.href='login.html'">
+        Login
+    </button>
+
+    
+
+</div>
+
+</header>
+
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Rent Calculator &
+            <span>Analyzer</span>
+        </h1>
+
+        <h3>Plan Better. Spend Smart.</h3>
+
+        <p>
+            Calculate rent, analyze monthly expenses and
+            check if the rent is affordable for your income.
+        </p>
+
+        <div class="hero-buttons">
+    <a href="calculator.html" class="primary-btn">
+        <i class="fa-solid fa-calculator"></i>
+        Start Calculator
+    </a>
+
+    <a href="analyzer.html" class="secondary-btn">
+        <i class="fa-solid fa-chart-column"></i>
+        View Analysis
+    </a>
+</div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img src="house.jpeg" alt="House">
+
+        <div class="note">
+
+            <p>✓ Monthly Cost</p>
+            <p>✓ Yearly Cost</p>
+            <p>✓ Affordability</p>
+            <p>✓ Smart Planning</p>
+
+        </div>
+
+        <div class="calculator-image">
+
+            <div class="display">
+                Rent Smart
+            </div>
+
+            <div class="keys">
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>÷</span>
+
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>×</span>
+
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>−</span>
+
+                <span>0</span>
+                <span>.</span>
+                <span>=</span>
+                <span>+</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+    <div class="feature-card">
+
+        <div class="feature-icon">
+            <i class="fa-solid fa-house"></i>
+        </div>
+
+        <h3>Accurate Calculation</h3>
+
+        <p>
+            Get exact monthly & yearly rent cost
+        </p>
+
+    </div>
+
+
+    <div class="feature-card">
+
+        <div class="feature-icon">
+            <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+
+        <h3>Affordability Analysis</h3>
+
+        <p>
+            Know if rent fits your income
+        </p>
+
+    </div>
+
+
+    <div class="feature-card">
+
+        <div class="feature-icon">
+            <i class="fa-solid fa-chart-simple"></i>
+        </div>
+
+        <h3>Expense Insights</h3>
+
+        <p>
+            Understand your rental spending
+        </p>
+
+    </div>
+
+
+    <div class="feature-card">
+
+        <div class="feature-icon">
+            <i class="fa-regular fa-clock"></i>
+        </div>
+
+        <h3>History Tracking</h3>
+
+        <p>
+            View past calculations
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="how-section">
+
+    <h2>
+        <span></span>
+        How It Works
+        <span></span>
+    </h2>
+
+    <div class="steps">
+
+        <div class="step">
+
+            <div class="step-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <h3>1. Login / Register</h3>
+
+            <p>Create your account</p>
+
+        </div>
+
+
+        <div class="arrow">
+            →
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-icon">
+                <i class="fa-solid fa-calculator"></i>
+            </div>
+
+            <h3>2. Enter Rent Details</h3>
+
+            <p>Add property & charges</p>
+
+        </div>
+
+
+        <div class="arrow">
+            →
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-icon">
+                <i class="fa-solid fa-chart-column"></i>
+            </div>
+
+            <h3>3. Get Analysis</h3>
+
+            <p>Check cost & affordability</p>
+
+        </div>
+
+
+        <div class="arrow">
+            →
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-icon">
+                <i class="fa-solid fa-house"></i>
+            </div>
+
+            <h3>4. Plan Better</h3>
+
+            <p>Make smart decisions</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHY USE ================= -->
+
+<section class="why-section">
+
+    <div class="why-content">
+
+        <div class="why-icon">
+            <i class="fa-solid fa-building"></i>
+        </div>
+
+<section class="why-use">
+       <h2>Why Use Our Tool?</h2>
+       <p>✓ Save Money</p>
+       <p>✓ Avoid High Rent</p>
+       <p>✓ Plan Your Budget</p>
+       <p>✓ Live Smarter</p>
+</section>
+
+    </div>
+
+</section>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function startCalculator() {
+
+    alert("Welcome to Rent Calculator!");
+
+}
+
+function viewAnalysis() {
+
+    alert("Rent Analysis section will open here.");
+
+}
+
+</script>
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+
+            <div class="footer-brand">
+
+                <div class="footer-house">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+
+                <div>
+
+                    <h3>Rent Analyzer</h3>
+
+                    <p>Smart Rent Planning</p>
+
+                </div>
+
+            </div>
+
+            <span>
+                Plan your rent better, understand
+                your expenses and live smarter.
+            </span>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Quick Links</h4>
+
+            <a href="index.html">Home</a>
+
+            <a href="calculator.html">Calculator</a>
+
+            <a href="analyzer.html">Analyzer</a>
+
+            <a href="history.html">History</a>
+
+            <a href="profile.html">Profile</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Useful</h4>
+
+            <a href="#">About Us</a>
+
+            <a href="#">How It Works</a>
+
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Terms & Conditions</a>
+
+            <a href="#">Contact Us</a>
+
+        </div>
+
+
+        <div class="plan-box">
+
+            <h3>
+                Plan Better. Spend Smart.
+            </h3>
+
+            <p>
+                Make informed rental decisions
+                and manage your budget wisely.
+            </p>
+
+            <i class="fa-solid fa-house plan-icon"></i>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2024 Rent Analyzer. All rights reserved.
+
+    </div>
+
+</footer>
+
+
+<script>
+
+function calculateRent() {
+
+    /* ==============================
+       GET VALUES FROM INPUTS
+    ============================== */
+
+    let rent =
+        Number(document.getElementById("monthlyRent").value) || 0;
+
+    let securityDeposit =
+        Number(document.getElementById("securityDeposit").value) || 0;
+
+    let brokerage =
+        Number(document.getElementById("brokerage").value) || 0;
+
+    let maintenance =
+        Number(document.getElementById("maintenance").value) || 0;
+
+    let parking =
+        Number(document.getElementById("parking").value) || 0;
+
+    let utilities =
+        Number(document.getElementById("utilities").value) || 0;
+
+    let internet =
+        Number(document.getElementById("internet").value) || 0;
+
+    let others =
+        Number(document.getElementById("others").value) || 0;
+
+    let income =
+        Number(document.getElementById("monthlyIncome").value) || 0;
+
+
+    /* ==============================
+       CALCULATE MONTHLY TOTAL
+    ============================== */
+
+    let monthlyTotal =
+        rent +
+        maintenance +
+        parking +
+        utilities +
+        internet +
+        others;
+
+
+    /* ==============================
+       YEARLY MONTHLY COST
+    ============================== */
+
+    let yearlyTotal =
+        monthlyTotal * 12;
+
+
+    /* ==============================
+       RENT PERCENTAGE
+    ============================== */
+
+    let percentage = 0;
+
+    if (income > 0) {
+
+        percentage =
+            (monthlyTotal / income) * 100;
+
+    }
+
+
+    /* ==============================
+       SHOW RESULT ON CALCULATOR
+    ============================== */
+
+    document.getElementById("monthlyResult").innerText =
+        "₹" + monthlyTotal.toLocaleString("en-IN");
+
+
+    document.getElementById("yearlyResult").innerText =
+        "₹" + yearlyTotal.toLocaleString("en-IN");
+
+
+    document.getElementById("percentageResult").innerText =
+        percentage.toFixed(1) + "%";
+
+
+    document.getElementById("resultBox").style.display =
+        "block";
+
+
+    /* =================================================
+       SAVE ALL VALUES FOR ANALYZER PAGE
+    ================================================= */
+
+    const rentData = {
+
+        monthlyRent: rent,
+
+        securityDeposit: securityDeposit,
+
+        brokerage: brokerage,
+
+        maintenance: maintenance,
+
+        parking: parking,
+
+        utilities: utilities,
+
+        internet: internet,
+
+        others: others,
+
+        monthlyIncome: income,
+
+        monthlyTotal: monthlyTotal,
+
+        yearlyTotal: yearlyTotal,
+
+        percentage: percentage
+
+    };
+
+
+    /* SAVE DATA */
+
+    localStorage.setItem(
+        "rentAnalyzerData",
+        JSON.stringify(rentData)
+    );
+
+
+    /* =================================================
+       OPEN ANALYZER PAGE
+    ================================================= */
+
+    window.location.href = "analyzer.html";
+
+}
+
+
+
+function resetCalculator() {
+
+    document
+        .querySelectorAll("input")
+        .forEach(function(input) {
+
+            input.value = "";
+
+        });
+
+
+    document.getElementById("resultBox").style.display =
+        "none";
+
+
+    /* Remove old saved data */
+
+    localStorage.removeItem("rentAnalyzerData");
+
+}
+
+</script>
+
+<!-- Login Popup -->
+<iframe
+    src="popup.html"
+    class="login-frame"
+    title="Login Popup">
+</iframe>
+</body>
+</html>

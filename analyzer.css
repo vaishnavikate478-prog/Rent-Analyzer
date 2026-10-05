@@ -1,0 +1,1310 @@
+/* =====================================================
+                        RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #10174d;
+}
+
+
+/* =====================================================
+                        NAVBAR
+===================================================== */
+
+.navbar {
+    width: 100%;
+    height: 62px;
+
+    background: #07164b;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 4.5%;
+
+    position: relative;
+    z-index: 100;
+}
+
+
+/* LOGO */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 25px;
+}
+
+
+.logo-text h2 {
+    color: white;
+    font-size: 16px;
+}
+
+
+.logo-text p {
+    color: #d4d7e5;
+    font-size: 9px;
+    margin-top: 2px;
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    height: 100%;
+}
+
+
+.nav-links a {
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+
+    position: relative;
+}
+
+
+.nav-links a i {
+    font-size: 11px;
+}
+
+
+/* ACTIVE */
+
+.nav-links a.active {
+    color: #ffc400;
+}
+
+
+.nav-links a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 3px;
+
+    background: #ffc400;
+}
+
+
+/* LOGIN */
+
+.login-btn {
+    height: auto !important;
+
+    padding: 7px 16px;
+
+    border: 1px solid #858ba5;
+
+    border-radius: 5px;
+}
+
+
+/* REGISTER */
+
+.register-btn {
+
+    height: auto !important;
+
+    padding: 8px 16px;
+
+    background: #6115d9;
+
+    border-radius: 5px;
+}
+
+
+/* =====================================================
+                       MAIN PAGE
+===================================================== */
+
+.result-page {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+}
+
+
+/* =====================================================
+                       BREADCRUMB
+===================================================== */
+
+.breadcrumb {
+
+    margin-top: 20px;
+
+    margin-bottom: 15px;
+
+    font-size: 10px;
+
+    color: #777b8d;
+}
+
+
+.breadcrumb a {
+
+    color: #4214b7;
+
+    text-decoration: none;
+}
+
+
+.breadcrumb span {
+
+    margin: 0 5px;
+
+}
+
+
+/* =====================================================
+                      PAGE HEADER
+===================================================== */
+
+.result-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+
+}
+
+
+.result-header h1 {
+
+    font-size: 26px;
+
+    color: #10174d;
+
+    margin-bottom: 8px;
+
+}
+
+
+.result-header h1 span {
+
+    color: #5712d5;
+
+}
+
+
+.result-header p {
+
+    font-size: 11px;
+
+    color: #555b70;
+
+}
+
+
+/* BUTTONS */
+
+.header-buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+.header-buttons button {
+
+    height: 34px;
+
+    padding: 0 15px;
+
+    border-radius: 5px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.new-button {
+
+    background: white;
+
+    border: 1px solid #8a6bc9;
+
+    color: #4c22a8;
+
+}
+
+
+.download-button {
+
+    background: #5711c9;
+
+    border: 1px solid #5711c9;
+
+    color: white;
+
+}
+
+
+/* =====================================================
+                    SUMMARY CARDS
+===================================================== */
+
+.summary-cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.summary-card {
+
+    min-height: 112px;
+
+    border-radius: 6px;
+
+    padding: 14px;
+
+}
+
+
+.summary-card.purple {
+
+    background: #f4f0ff;
+
+}
+
+
+.summary-card.blue {
+
+    background: #eef5ff;
+
+}
+
+
+.summary-card.green {
+
+    background: #eefaf4;
+
+}
+
+
+.summary-card.yellow {
+
+    background: #fff9e9;
+
+}
+
+
+.card-icon {
+
+    font-size: 18px;
+
+    color: #4e16cb;
+
+    margin-bottom: 9px;
+
+}
+
+
+.summary-card h4 {
+
+    font-size: 10px;
+
+    color: #22294b;
+
+    margin-bottom: 4px;
+
+}
+
+
+.summary-card h2 {
+
+    font-size: 18px;
+
+    color: #202542;
+
+}
+
+
+.summary-card p {
+
+    font-size: 8px;
+
+    color: #555;
+
+    margin-bottom: 4px;
+
+}
+
+
+.summary-card .percentage {
+
+    color: #f15b2a;
+
+    font-size: 21px;
+
+}
+
+
+/* =====================================================
+                  ANALYSIS GRID
+===================================================== */
+
+.analysis-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.analysis-card {
+
+    background: white;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow:
+        0 2px 10px rgba(0,0,0,0.04);
+
+    border-radius: 5px;
+
+    padding: 15px;
+
+}
+
+
+.analysis-card h3 {
+
+    font-size: 11px;
+
+    color: #4a12bd;
+
+    margin-bottom: 18px;
+
+}
+
+
+.analysis-card h3 i {
+
+    margin-right: 5px;
+
+}
+
+
+/* =====================================================
+                      PIE CHART
+===================================================== */
+
+.breakdown-content {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+
+.pie-chart {
+
+    width: 115px;
+
+    height: 115px;
+
+    border-radius: 50%;
+
+    background:
+
+        conic-gradient(
+
+            #4b12cf 0deg 286deg,
+
+            #681fe0 286deg 305deg,
+
+            #7733e8 305deg 315deg,
+
+            #884be9 315deg 330deg,
+
+            #9960ed 330deg 342deg,
+
+            #b07bed 342deg 360deg
+
+        );
+
+}
+
+
+.legend {
+
+    flex: 1;
+
+}
+
+
+.legend div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 9px;
+
+    color: #444;
+
+    margin-bottom: 8px;
+
+}
+
+
+.legend b {
+
+    margin-left: auto;
+
+    font-weight: normal;
+
+}
+
+
+.dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    display: inline-block;
+
+}
+
+
+.d1 {
+    background: #4b12cf;
+}
+
+.d2 {
+    background: #681fe0;
+}
+
+.d3 {
+    background: #7733e8;
+}
+
+.d4 {
+    background: #884be9;
+}
+
+.d5 {
+    background: #9960ed;
+}
+
+.d6 {
+    background: #b07bed;
+}
+
+
+/* TOTAL */
+
+.total-line {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    border-top: 1px solid #eeeeee;
+
+    margin-top: 18px;
+
+    padding-top: 13px;
+
+    font-size: 10px;
+
+    color: #4212b9;
+
+}
+
+
+/* =====================================================
+                    YEARLY OVERVIEW
+===================================================== */
+
+.overview-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 9px 0;
+
+    font-size: 9px;
+
+    color: #333;
+
+}
+
+
+.overview-row strong {
+
+    font-weight: normal;
+
+}
+
+
+.highlight-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #eef4ff;
+
+    padding: 10px;
+
+    margin-top: 6px;
+
+    border-radius: 2px;
+
+    font-size: 9px;
+
+    color: #264a9b;
+
+}
+
+
+.highlight-row strong {
+
+    font-size: 12px;
+
+    color: #2853a8;
+
+}
+
+
+.highlight-row small {
+
+    display: block;
+
+    font-size: 7px;
+
+}
+
+
+.highlight-row.yearly {
+
+    margin-top: 10px;
+
+}
+
+
+/* =====================================================
+                AFFORDABILITY ANALYSIS
+===================================================== */
+
+.affordability-card {
+
+    background: #effaf4;
+
+    border-radius: 5px;
+
+    padding: 15px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.affordability-card h3 {
+
+    font-size: 11px;
+
+    color: #235f48;
+
+    margin-bottom: 15px;
+
+}
+
+
+.affordability-card h3 i {
+
+    margin-right: 6px;
+
+    color: #3a9d70;
+
+}
+
+
+.affordability-content {
+
+    display: grid;
+
+    grid-template-columns:
+        1.2fr 1.2fr 0.9fr 1.2fr;
+
+    align-items: center;
+
+}
+
+
+.affordability-item {
+
+    padding-right: 20px;
+
+}
+
+
+.affordability-item > div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 9px;
+
+    margin-bottom: 9px;
+
+}
+
+
+.affordability-item i {
+
+    color: #49a67b;
+
+}
+
+
+.affordability-item strong {
+
+    font-size: 9px;
+
+    margin-left: 22px;
+
+}
+
+
+.affordability-percentage {
+
+    border-left: 1px solid #c8ddd4;
+
+    padding-left: 20px;
+
+}
+
+
+.affordability-percentage span {
+
+    display: block;
+
+    font-size: 8px;
+
+    color: #43816a;
+
+    margin-bottom: 7px;
+
+}
+
+
+.affordability-percentage strong {
+
+    font-size: 21px;
+
+    color: #f05a29;
+
+}
+
+
+.warning {
+
+    border-left: 1px solid #c8ddd4;
+
+    padding-left: 20px;
+
+    display: flex;
+
+    gap: 8px;
+
+    align-items: flex-start;
+
+}
+
+
+.warning i {
+
+    color: #f0642d;
+
+    font-size: 13px;
+
+}
+
+
+.warning p {
+
+    font-size: 8px;
+
+    line-height: 1.6;
+
+    color: #555;
+
+}
+
+
+/* =====================================================
+                  CALCULATION SUMMARY
+===================================================== */
+
+.calculation-summary {
+
+    background: white;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 5px;
+
+    padding: 15px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.calculation-summary > h3 {
+
+    color: #4812bd;
+
+    font-size: 11px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.summary-columns {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
+}
+
+
+.summary-column {
+
+    padding: 0 20px;
+
+    border-right: 1px solid #eeeeee;
+
+}
+
+
+.summary-column:first-child {
+
+    padding-left: 0;
+
+}
+
+
+.summary-column:last-child {
+
+    border-right: none;
+
+}
+
+
+.summary-column h4 {
+
+    font-size: 9px;
+
+    color: #333;
+
+    margin-bottom: 13px;
+
+}
+
+
+.summary-column div {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 10px;
+
+    font-size: 8px;
+
+    color: #444;
+
+}
+
+
+.summary-column strong {
+
+    font-weight: normal;
+
+    white-space: nowrap;
+
+}
+
+
+/* TIP */
+
+.summary-tip {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: #f2efff;
+
+    border-radius: 4px;
+
+    padding: 9px 12px;
+
+    margin-top: 15px;
+
+    font-size: 8px;
+
+    color: #4c4c5d;
+
+}
+
+
+.summary-tip i {
+
+    color: #5814d3;
+
+    font-size: 13px;
+
+}
+
+
+.summary-tip b {
+
+    color: #4211b5;
+
+}
+
+
+/* =====================================================
+                         FOOTER
+===================================================== */
+
+.footer {
+
+    background: #06164b;
+
+    color: white;
+
+    padding: 27px 5% 0;
+
+}
+
+
+.footer-container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.2fr 0.8fr 0.8fr 1.2fr;
+
+    gap: 30px;
+
+    padding-bottom: 25px;
+
+}
+
+
+.footer-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.footer-house {
+
+    font-size: 25px;
+
+}
+
+
+.footer-brand h3 {
+
+    font-size: 15px;
+
+}
+
+
+.footer-brand p {
+
+    font-size: 8px;
+
+    color: #c8ccdd;
+
+    margin-top: 3px;
+
+}
+
+
+.footer-about > span {
+
+    display: block;
+
+    max-width: 190px;
+
+    font-size: 9px;
+
+    line-height: 1.8;
+
+    color: #e0e2eb;
+
+}
+
+
+.footer-column {
+
+    border-left:
+        1px solid rgba(255,255,255,0.25);
+
+    padding-left: 25px;
+
+}
+
+
+.footer-column h4 {
+
+    font-size: 11px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.footer-column a {
+
+    display: block;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.footer-column a:hover {
+
+    color: #ffc400;
+
+}
+
+
+.plan-box {
+
+    background:
+        linear-gradient(
+            135deg,
+            #4e13bd,
+            #30118d
+        );
+
+    border-radius: 6px;
+
+    padding: 18px;
+
+    min-height: 120px;
+
+    position: relative;
+
+}
+
+
+.plan-box h3 {
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.plan-box p {
+
+    font-size: 9px;
+
+    line-height: 1.6;
+
+    max-width: 180px;
+
+}
+
+
+.plan-icon {
+
+    position: absolute;
+
+    right: 18px;
+
+    bottom: 15px;
+
+    font-size: 35px;
+
+    opacity: 0.2;
+
+}
+
+
+/* COPYRIGHT */
+
+.copyright {
+
+    border-top:
+        1px solid rgba(255,255,255,0.2);
+
+    text-align: center;
+
+    padding: 12px 0;
+
+    font-size: 9px;
+
+    color: #d9dbe5;
+
+}
+
+
+/* =====================================================
+                      RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .summary-cards {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .analysis-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .affordability-content {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 15px;
+
+    }
+
+
+    .warning {
+
+        border-left: none;
+
+        padding-left: 0;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+
+        height: auto;
+
+        padding: 12px;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+
+    .nav-links {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+
+    .nav-links a {
+
+        height: auto;
+
+    }
+
+
+    .result-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+
+    .summary-cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .summary-columns {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .summary-column {
+
+        border-right: none;
+
+        border-bottom: 1px solid #eee;
+
+        padding: 15px 0;
+
+    }
+
+
+    .summary-column:last-child {
+
+        border-bottom: none;
+
+    }
+
+
+    .affordability-content {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .affordability-percentage {
+
+        border-left: none;
+
+        border-top: 1px solid #c8ddd4;
+
+        padding: 15px 0 0;
+
+    }
+
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .footer-column {
+
+        border-left: none;
+
+        padding-left: 0;
+
+    }
+
+}

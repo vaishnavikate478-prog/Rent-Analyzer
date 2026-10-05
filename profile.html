@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rent Analyzer - My Profile</title>
+
+    <link rel="stylesheet" href="profile.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo-section">
+        <div class="logo">
+            <i class="fa-solid fa-house"></i>
+        </div>
+
+        <div>
+            <h2>Rent Analyzer</h2>
+            <span>Smart Rent Planning</span>
+        </div>
+    </div>
+
+    <nav>
+        <a href="index.html" class="active">
+            <i class="fa-solid fa-house"></i> Home
+        </a>
+
+        <a href="calculator.html">
+            <i class="fa-solid fa-calculator"></i>
+             Calculator
+</a>
+
+       <a href="analyzer.html" class="btn">
+    Analyze Rent
+</a>
+
+        <a href="history.html">
+            <i class="fa-solid fa-clock-rotate-left"></i> History
+        </a>
+
+        <a href="profile.html">
+            <i class="fa-solid fa-user"></i> Profile
+        </a>
+        <a href="register.html" class="menu-item">
+                <i data-lucide="register"></i>
+                register
+            </a>
+    </nav>
+
+    <div class="auth-buttons">
+
+    <button class="login"
+            onclick="window.location.href='login.html'">
+        Login
+    </button>
+
+    <button class="register">
+        Register
+    </button>
+
+</div>
+
+</header>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+
+            <div class="logo-icon">
+                <i data-lucide="house"></i>
+            </div>
+
+            <div>
+                <h2>Rent Analyzer</h2>
+                <p>Smart Rent Planning</p>
+            </div>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="#" class="menu-item">
+                <i data-lucide="house"></i>
+                Dashboard
+            </a>
+
+            <a href="calculator.html" class="menu-item">
+                <i data-lucide="calculator"></i>
+                Calculator
+            </a>
+
+            <a href="analyzer.html" class="menu-item">
+                <i data-lucide="chart-column"></i>
+                Analyzer
+            </a>
+
+            <a href="history.html" class="menu-item">
+                <i data-lucide="history"></i>
+                History
+            </a>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="pie-chart"></i>
+                Reports
+            </a>
+
+            <a href="profile.html" class="menu-item active">
+                <i data-lucide="user-round"></i>
+                Profile
+            </a>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="settings"></i>
+                Settings
+            </a>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="headphones"></i>
+                Support
+            </a>
+           <a href="register.html" class="menu-item">
+                <i data-lucide="register"></i>
+                register
+            </a>
+        </nav>
+
+
+        <div class="logout">
+
+            <i data-lucide="power"></i>
+
+            <span>Logout</span>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+
+        <!-- ================= TOPBAR ================= -->
+
+        <header class="topbar">
+
+            <button class="hamburger">
+
+                <i data-lucide="menu"></i>
+
+            </button>
+
+
+            <div class="top-right">
+
+                <div class="notification">
+
+                    <i data-lucide="bell"></i>
+
+                    <span>3</span>
+
+                </div>
+
+
+                <div class="top-profile">
+
+                    <div class="top-avatar">
+                        
+                    </div>
+
+                    <strong></strong>
+
+                    <i data-lucide="chevron-down"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <section class="content">
+
+
+            <!-- PAGE TITLE -->
+
+            <div class="page-title">
+
+                <h1>My Profile</h1>
+
+                <div class="breadcrumb">
+
+                    <span>Dashboard</span>
+
+                    <i data-lucide="chevron-right"></i>
+
+                    <p>Profile</p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= PROFILE TOP ================= -->
+
+            <div class="profile-grid">
+
+
+                <!-- ================= LEFT PROFILE CARD ================= -->
+
+                <div class="profile-card">
+
+
+                    <div class="avatar-wrapper">
+
+                        <div class="big-avatar">
+                            
+                        </div>
+
+                        <button class="camera">
+
+                            <i data-lucide="camera"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <h2></h2>
+
+                    <p class="email">
+                        
+                    </p>
+
+
+                    <div class="premium">
+
+                        <i data-lucide="crown"></i>
+
+                        
+
+                    </div>
+
+
+                    <div class="profile-details">
+
+
+                        <div class="detail">
+
+                            <i data-lucide="calendar-days"></i>
+
+                            <span>Member Since</span>
+
+                            <strong></strong>
+
+                        </div>
+
+
+                        <div class="detail">
+
+                            <i data-lucide="phone"></i>
+
+                            <span>Phone</span>
+
+                            <strong>+91 98765 43210</strong>
+
+                        </div>
+
+
+                        <div class="detail">
+
+                            <i data-lucide="map-pin"></i>
+
+                            <span>Location</span>
+
+                            <strong>Pune, Maharashtra</strong>
+
+                        </div>
+
+
+                        <div class="detail">
+
+                            <i data-lucide="circle-check"></i>
+
+                            <span>Account Status</span>
+
+                            <b class="active-status">
+                                Active
+                            </b>
+
+                        </div>
+
+                    </div>
+
+
+                    <button class="password-btn">
+
+                        <i data-lucide="lock"></i>
+
+                        Change Password
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- ================= EDIT PROFILE ================= -->
+
+                <div class="edit-card">
+
+
+                    <div class="section-heading">
+
+                        <div class="heading-icon">
+
+                            <i data-lucide="user-round-pen"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h2>Edit Profile</h2>
+
+                            <p>Update your personal information</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <form id="profileForm">
+
+
+                        <div class="form-grid">
+
+
+                            <!-- FULL NAME -->
+
+                            <div class="form-group">
+
+                                <label>Full Name</label>
+
+                                <input
+                                    
+
+                            </div>
+
+
+                            <!-- EMAIL -->
+
+                            <div class="form-group">
+
+                                <label>Email Address</label>
+
+                                <div class="input-lock">
+
+                                    <input
+                                        
+                                    >
+
+                                    <i data-lucide="lock"></i>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- PHONE -->
+
+                            <div class="form-group">
+
+                                <label>Phone Number</label>
+
+                                <input
+                                    
+                                >
+
+                            </div>
+
+
+                            <!-- LOCATION -->
+
+                            <div class="form-group">
+
+                                <label>Location</label>
+
+                                <input
+                                    
+                                >
+
+                            </div>
+
+
+                            <!-- DOB -->
+
+                            <div class="form-group">
+
+                                <label>Date of Birth</label>
+
+                                <div class="input-icon">
+
+                                    <i data-lucide="calendar"></i>
+
+                                    <input
+                                        
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- GENDER -->
+
+                            <div class="form-group">
+
+                                <label>Gender</label>
+
+                                <div class="select-input">
+
+                                    <select>
+
+                                        <option></option>
+
+                                        <option></option>
+
+                                        <option></option>
+
+                                    </select>
+
+                                    <i data-lucide="chevron-down"></i>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- ABOUT -->
+
+                        <div class="form-group about">
+
+                            <label>About You</label>
+
+                            <textarea></textarea>
+
+                        </div>
+
+
+
+                        <!-- BUTTONS -->
+
+                        <div class="form-buttons">
+
+                            <button
+                                type="button"
+                                class="cancel-btn"
+                                onclick="cancelChanges()"
+                            >
+                                Cancel
+                            </button>
+
+
+                            <button
+                                type="submit"
+                                class="save-btn"
+                            >
+
+                                <i data-lucide="save"></i>
+
+                                Save Changes
+
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= ACCOUNT ACTIVITY ================= -->
+
+            <div class="activity-card">
+
+
+                <div class="activity-heading">
+
+                    <div class="activity-icon">
+
+                        <i data-lucide="shield-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h2>Account Activity</h2>
+
+                        <p>Your recent account activity</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="activity-grid">
+
+
+                    <!-- LAST LOGIN -->
+
+                    <div class="activity-box blue">
+
+                        <div class="activity-box-icon">
+
+                            <i data-lucide="log-in"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>Last Login</h3>
+
+                            <p>25 May 2024, 10:30 AM</p>
+
+                            <span>Chrome on Windows</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ACCOUNT CREATED -->
+
+                    <div class="activity-box green">
+
+                        <div class="activity-box-icon">
+
+                            <i data-lucide="shield-check"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>Account Created</h3>
+
+                            <p>12 March 2024, 09:15 AM</p>
+
+                            <span>Welcome to Rent Analyzer!</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="activity-box orange">
+
+                        <div class="activity-box-icon">
+
+                            <i data-lucide="lock-keyhole"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>Password Changed</h3>
+
+                            <p>20 April 2024, 04:45 PM</p>
+
+                            <span>Password updated successfully</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="activity-box purple">
+
+                        <div class="activity-box-icon">
+
+                            <i data-lucide="mail"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>Email Verified</h3>
+
+                            <p>12 March 2024, 09:20 AM</p>
+
+                            <span>rahulsharma@gmail.com</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="profile.js"></script>
+
+<script>
+    lucide.createIcons();
+</script>
+
+</body>
+</html>

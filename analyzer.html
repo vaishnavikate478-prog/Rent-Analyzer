@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rent Analysis Results</title>
+
+    <link rel="stylesheet" href="analyzer.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+                         NAVBAR
+===================================================== -->
+
+<nav class="navbar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo-area">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-house"></i>
+        </div>
+
+        <div class="logo-text">
+
+            <h2>Rent Analyzer</h2>
+
+            <p>Smart Rent Planning</p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- NAVIGATION -->
+
+    <div class="nav-links">
+
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </a>
+
+        <a href="calculator.html">
+            <i class="fa-solid fa-calculator"></i>
+            Calculator
+        </a>
+
+        <a href="analyzer.html" class="active">
+            <i class="fa-solid fa-chart-column"></i>
+            Analyzer
+        </a>
+
+        <a href="history.html">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            History
+        </a>
+
+        <a href="profile.html">
+            <i class="fa-solid fa-user"></i>
+            Profile
+        </a>
+
+        <a href="login.html" class="login-btn">
+            Login
+        </a>
+
+        <a href="register.html" class="register-btn">
+            Register
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+                      MAIN PAGE
+===================================================== -->
+
+<main class="result-page">
+
+
+    <!-- BREADCRUMB -->
+
+    <div class="breadcrumb">
+
+        <a href="index.html">Home</a>
+
+        <span>/</span>
+
+        Result
+
+    </div>
+
+
+
+    <!-- =================================================
+                      PAGE HEADER
+    ================================================== -->
+
+    <div class="result-header">
+
+
+        <div>
+
+            <h1>
+                Your Rent Analysis <span>Results</span>
+            </h1>
+
+            <p>
+                Here's your rent summary and affordability analysis.
+            </p>
+
+        </div>
+
+
+
+        <div class="header-buttons">
+
+            <button class="new-button"
+                    onclick="window.location.href='calculator.html'">
+
+                <i class="fa-solid fa-rotate"></i>
+
+                New Calculation
+
+            </button>
+
+
+            <button class="download-button"
+                    onclick="window.print()">
+
+                <i class="fa-solid fa-download"></i>
+
+                Download / Print
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+                    SUMMARY CARDS
+    ================================================== -->
+
+    <div class="summary-cards">
+
+
+        <!-- CARD 1 -->
+
+        <div class="summary-card purple">
+
+            <div class="card-icon">
+                <i class="fa-regular fa-calendar-days"></i>
+            </div>
+
+            <h4>Total Monthly Cost</h4>
+
+            <h2 id="totalMonthlyCost">
+                ₹ 0
+            </h2>
+
+        </div>
+
+
+
+        <!-- CARD 2 -->
+
+        <div class="summary-card blue">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-chart-column"></i>
+            </div>
+
+            <h4>Total Yearly Cost</h4>
+
+            <p>(Including One-time)</p>
+
+            <h2 id="totalYearlyCost">
+                ₹ 0
+            </h2>
+
+        </div>
+
+
+
+        <!-- CARD 3 -->
+
+        <div class="summary-card green">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-wallet"></i>
+            </div>
+
+            <h4>Total Initial Payment</h4>
+
+            <p>(One-time)</p>
+
+            <h2 id="totalInitialPayment">
+                ₹ 0
+            </h2>
+
+        </div>
+
+
+
+        <!-- CARD 4 -->
+
+        <div class="summary-card yellow">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-chart-pie"></i>
+            </div>
+
+            <h4>Your Rent Percentage</h4>
+
+            <h2 class="percentage" id="rentPercentage">
+                0%
+            </h2>
+
+            <p>of Monthly Income</p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+                  BREAKDOWN + YEARLY OVERVIEW
+    ================================================== -->
+
+    <div class="analysis-grid">
+
+
+        <!-- =================================================
+                      MONTHLY BREAKDOWN
+        ================================================== -->
+
+        <div class="analysis-card">
+
+
+            <h3>
+                Monthly Cost Breakdown
+            </h3>
+
+
+            <div class="breakdown-content">
+
+
+                <!-- PIE CHART -->
+
+                <div class="pie-chart"></div>
+
+
+
+                <!-- LEGEND -->
+
+                <div class="legend">
+
+
+                    <div>
+
+                        <span class="dot d1"></span>
+
+                        Basic Rent
+
+                        <b id="basicRent">
+                            ₹ 0
+                        </b>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="dot d2"></span>
+
+                        Maintenance
+
+                        <b id="maintenance">
+                            ₹ 0
+                        </b>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="dot d3"></span>
+
+                        Parking
+
+                        <b id="parking">
+                            ₹ 0
+                        </b>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="dot d4"></span>
+
+                        Utilities
+
+                        <b id="utilities">
+                            ₹ 0
+                        </b>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="dot d5"></span>
+
+                        Internet / Wi-Fi
+
+                        <b id="internet">
+                            ₹ 0
+                        </b>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="dot d6"></span>
+
+                        Others
+
+                        <b id="others">
+                            ₹ 0
+                        </b>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <div class="total-line">
+
+                <strong>Total Monthly Cost</strong>
+
+                <strong id="breakdownTotal">
+                    ₹ 0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+                       YEARLY OVERVIEW
+        ================================================== -->
+
+        <div class="analysis-card">
+
+
+            <h3>
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                Yearly Overview
+
+            </h3>
+
+
+
+            <div class="overview-row">
+
+                <span>Total Monthly Cost</span>
+
+                <strong id="overviewMonthly">
+                    ₹ 0
+                </strong>
+
+            </div>
+
+
+            <div class="overview-row">
+
+                <span>Total Yearly Cost</span>
+
+                <strong id="overviewYearly">
+                    ₹ 0
+                </strong>
+
+            </div>
+
+
+            <div class="overview-row">
+
+                <span>Security Deposit (One-time)</span>
+
+                <strong id="overviewDeposit">
+                    ₹ 0
+                </strong>
+
+            </div>
+
+
+            <div class="overview-row">
+
+                <span>Brokerage (One-time)</span>
+
+                <strong id="overviewBrokerage">
+                    ₹ 0
+                </strong>
+
+            </div>
+
+
+
+            <div class="highlight-row">
+
+                <span>
+
+                    Total Initial Payment
+
+                    <small>(One-time)</small>
+
+                </span>
+
+                <strong id="overviewInitial">
+                    ₹ 0
+                </strong>
+
+            </div>
+
+
+
+            <div class="highlight-row yearly">
+
+                <span>
+
+                    Effective Yearly Cost
+
+                    <small>
+                        (Including One-time)
+                    </small>
+
+                </span>
+
+                <strong id="effectiveYearly">
+                    ₹ 0
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+                   AFFORDABILITY ANALYSIS
+    ================================================== -->
+
+    <div class="affordability-card">
+
+
+        <h3>
+
+            <i class="fa-regular fa-circle-check"></i>
+
+            Affordability Analysis
+
+        </h3>
+
+
+
+        <div class="affordability-content">
+
+
+            <!-- INCOME -->
+
+            <div class="affordability-item">
+
+                <div>
+
+                    <i class="fa-solid fa-sack-dollar"></i>
+
+                    <span>
+                        Monthly Income (After Tax)
+                    </span>
+
+                </div>
+
+                <strong id="incomeAmount">
+                    ₹ 0
+                </strong>
+
+            </div>
+
+
+
+            <!-- RECOMMENDED -->
+
+            <div class="affordability-item">
+
+                <div>
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    <span>
+                        Recommended (30% of Income)
+                    </span>
+
+                </div>
+
+                <strong id="recommendedAmount">
+                    ₹ 0
+                </strong>
+
+            </div>
+
+
+
+            <!-- PERCENTAGE -->
+
+            <div class="affordability-percentage">
+
+                <span>
+                    Your Rent Percentage
+                </span>
+
+                <strong id="affordabilityPercentage">
+                    0%
+                </strong>
+
+            </div>
+
+
+
+            <!-- WARNING -->
+
+            <div class="warning" id="warningBox">
+
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+                <p id="warningText">
+
+                    Enter your calculation details to see
+                    affordability status.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+                    CALCULATION SUMMARY
+    ================================================== -->
+
+    <div class="calculation-summary">
+
+
+        <h3>
+            Calculation Summary
+        </h3>
+
+
+
+        <div class="summary-columns">
+
+
+            <!-- PROPERTY DETAILS -->
+
+            <div class="summary-column">
+
+                <h4>Property Details</h4>
+
+                <div>
+
+                    <span>
+                        Monthly Rent (Basic)
+                    </span>
+
+                    <strong id="summaryRent">
+                        ₹ 0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Security Deposit (One-time)
+                    </span>
+
+                    <strong id="summaryDeposit">
+                        ₹ 0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Brokerage (One-time)
+                    </span>
+
+                    <strong id="summaryBrokerage">
+                        ₹ 0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ADDITIONAL CHARGES -->
+
+            <div class="summary-column">
+
+                <h4>
+                    Additional Monthly Charges
+                </h4>
+
+                <div>
+
+                    <span>Maintenance</span>
+
+                    <strong id="summaryMaintenance">
+                        ₹ 0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>Parking</span>
+
+                    <strong id="summaryParking">
+                        ₹ 0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>Utilities</span>
+
+                    <strong id="summaryUtilities">
+                        ₹ 0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>Internet / Wi-Fi</span>
+
+                    <strong id="summaryInternet">
+                        ₹ 0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>Others</span>
+
+                    <strong id="summaryOthers">
+                        ₹ 0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- INCOME -->
+
+            <div class="summary-column">
+
+                <h4>
+                    Income Details
+                </h4>
+
+                <div>
+
+                    <span>
+                        Monthly Income (After Tax)
+                    </span>
+
+                    <strong id="summaryIncome">
+                        ₹ 0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- TIP -->
+
+        <div class="summary-tip">
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+            <span>
+
+                <b>Tip:</b>
+
+                Keep your rent below 30% of your income
+                for better financial stability and savings.
+
+            </span>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<!-- =====================================================
+                         FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+
+    <div class="footer-container">
+
+
+        <!-- ABOUT -->
+
+        <div class="footer-about">
+
+            <div class="footer-brand">
+
+                <div class="footer-house">
+
+                    <i class="fa-solid fa-house"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>Rent Analyzer</h3>
+
+                    <p>Smart Rent Planning</p>
+
+                </div>
+
+            </div>
+
+
+            <span>
+
+                Plan your rent better, understand
+                your expenses and live smarter.
+
+            </span>
+
+        </div>
+
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-column">
+
+            <h4>Quick Links</h4>
+
+            <a href="index.html">Home</a>
+
+            <a href="calculator.html">Calculator</a>
+
+            <a href="analyzer.html">Analyzer</a>
+
+            <a href="history.html">History</a>
+
+            <a href="profile.html">Profile</a>
+
+        </div>
+
+
+
+        <!-- USEFUL -->
+
+        <div class="footer-column">
+
+            <h4>Useful</h4>
+
+            <a href="#">About Us</a>
+
+            <a href="#">How It Works</a>
+
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Terms & Conditions</a>
+
+            <a href="#">Contact Us</a>
+
+        </div>
+
+
+
+        <!-- PLAN BOX -->
+
+        <div class="plan-box">
+
+            <h3>
+                Plan Better. Spend Smart.
+            </h3>
+
+            <p>
+                Make informed rental decisions
+                and manage your budget wisely.
+            </p>
+
+            <i class="fa-solid fa-house plan-icon"></i>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- COPYRIGHT -->
+
+    <div class="copyright">
+
+        © 2024 Rent Analyzer. All rights reserved.
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+                    JAVASCRIPT
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* =================================================
+                     GET SAVED DATA
+    ================================================= */
+
+    const savedData =
+        localStorage.getItem("rentAnalyzerData");
+
+
+    /* If no data is available */
+
+    if (!savedData) {
+
+        console.log("No calculator data found.");
+
+        return;
+
+    }
+
+
+    const data =
+        JSON.parse(savedData);
+
+
+
+    /* =================================================
+                     FORMAT MONEY
+    ================================================= */
+
+    function money(value) {
+
+        return "₹ " +
+            Number(value || 0).toLocaleString("en-IN");
+
+    }
+
+
+
+    /* =================================================
+                   GET CALCULATOR VALUES
+    ================================================= */
+
+    const rent =
+        Number(data.monthlyRent) || 0;
+
+    const securityDeposit =
+        Number(data.securityDeposit) || 0;
+
+    const brokerage =
+        Number(data.brokerage) || 0;
+
+    const maintenanceValue =
+        Number(data.maintenance) || 0;
+
+    const parkingValue =
+        Number(data.parking) || 0;
+
+    const utilitiesValue =
+        Number(data.utilities) || 0;
+
+    const internetValue =
+        Number(data.internet) || 0;
+
+    const othersValue =
+        Number(data.others) || 0;
+
+    const income =
+        Number(data.monthlyIncome) || 0;
+
+
+
+    /* =================================================
+                     CALCULATIONS
+    ================================================= */
+
+    const monthlyTotal =
+        rent +
+        maintenanceValue +
+        parkingValue +
+        utilitiesValue +
+        internetValue +
+        othersValue;
+
+
+    const yearlyMonthlyCost =
+        monthlyTotal * 12;
+
+
+    const initialPayment =
+        securityDeposit +
+        brokerage;
+
+
+    const effectiveYearlyCost =
+        yearlyMonthlyCost +
+        initialPayment;
+
+
+    const rentPercentage =
+        income > 0
+            ? (monthlyTotal / income) * 100
+            : 0;
+
+
+    const recommendedRent =
+        income * 0.30;
+
+
+
+    /* =================================================
+                     SUMMARY CARDS
+    ================================================= */
+
+    document.getElementById("totalMonthlyCost").innerText =
+        money(monthlyTotal);
+
+
+    document.getElementById("totalYearlyCost").innerText =
+        money(effectiveYearlyCost);
+
+
+    document.getElementById("totalInitialPayment").innerText =
+        money(initialPayment);
+
+
+    document.getElementById("rentPercentage").innerText =
+        rentPercentage.toFixed(1) + "%";
+
+
+
+    /* =================================================
+                  MONTHLY BREAKDOWN
+    ================================================= */
+
+    document.getElementById("basicRent").innerText =
+        money(rent);
+
+
+    document.getElementById("maintenance").innerText =
+        money(maintenanceValue);
+
+
+    document.getElementById("parking").innerText =
+        money(parkingValue);
+
+
+    document.getElementById("utilities").innerText =
+        money(utilitiesValue);
+
+
+    document.getElementById("internet").innerText =
+        money(internetValue);
+
+
+    document.getElementById("others").innerText =
+        money(othersValue);
+
+
+    document.getElementById("breakdownTotal").innerText =
+        money(monthlyTotal);
+
+
+
+    /* =================================================
+                    YEARLY OVERVIEW
+    ================================================= */
+
+    document.getElementById("overviewMonthly").innerText =
+        money(monthlyTotal);
+
+
+    document.getElementById("overviewYearly").innerText =
+        money(yearlyMonthlyCost);
+
+
+    document.getElementById("overviewDeposit").innerText =
+        money(securityDeposit);
+
+
+    document.getElementById("overviewBrokerage").innerText =
+        money(brokerage);
+
+
+    document.getElementById("overviewInitial").innerText =
+        money(initialPayment);
+
+
+    document.getElementById("effectiveYearly").innerText =
+        money(effectiveYearlyCost);
+
+
+
+    /* =================================================
+                 AFFORDABILITY ANALYSIS
+    ================================================= */
+
+    document.getElementById("incomeAmount").innerText =
+        money(income);
+
+
+    document.getElementById("recommendedAmount").innerText =
+        money(recommendedRent);
+
+
+    document.getElementById("affordabilityPercentage").innerText =
+        rentPercentage.toFixed(1) + "%";
+
+
+
+    /* =================================================
+                       WARNING
+    ================================================= */
+
+    const warningText =
+        document.getElementById("warningText");
+
+
+    if (income <= 0) {
+
+        warningText.innerHTML =
+            "Monthly income is not entered.";
+
+    }
+
+    else if (rentPercentage <= 30) {
+
+        warningText.innerHTML =
+            "Your rent is within the recommended limit.<br>" +
+            "Your current rent appears affordable.";
+
+    }
+
+    else {
+
+        warningText.innerHTML =
+            "Your rent is above the recommended limit.<br>" +
+            "Consider reducing rent or increasing income.";
+
+    }
+
+
+
+    /* =================================================
+                 CALCULATION SUMMARY
+    ================================================= */
+
+    document.getElementById("summaryRent").innerText =
+        money(rent);
+
+
+    document.getElementById("summaryDeposit").innerText =
+        money(securityDeposit);
+
+
+    document.getElementById("summaryBrokerage").innerText =
+        money(brokerage);
+
+
+    document.getElementById("summaryMaintenance").innerText =
+        money(maintenanceValue);
+
+
+    document.getElementById("summaryParking").innerText =
+        money(parkingValue);
+
+
+    document.getElementById("summaryUtilities").innerText =
+        money(utilitiesValue);
+
+
+    document.getElementById("summaryInternet").innerText =
+        money(internetValue);
+
+
+    document.getElementById("summaryOthers").innerText =
+        money(othersValue);
+
+
+    document.getElementById("summaryIncome").innerText =
+        money(income);
+
+
+});
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1118 @@
+/* =====================================================
+                     RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #ffffff;
+
+    color: #10174d;
+
+}
+
+
+
+/* =====================================================
+                       NAVBAR
+===================================================== */
+
+.navbar {
+
+    width: 100%;
+
+    height: 62px;
+
+    background: #07164b;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 4.5%;
+
+    position: relative;
+
+    z-index: 1000;
+
+}
+
+
+
+/* LOGO */
+
+.logo-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+
+.logo-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    font-size: 25px;
+
+}
+
+
+
+.logo-text h2 {
+
+    color: white;
+
+    font-size: 16px;
+
+    margin: 0;
+
+}
+
+
+
+.logo-text p {
+
+    color: #d4d7e5;
+
+    font-size: 9px;
+
+    margin-top: 2px;
+
+}
+
+
+
+/* NAV LINKS */
+
+.nav-links {
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 21px;
+
+    height: 100%;
+
+}
+
+
+
+.nav-links a {
+
+    height: 62px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+
+    position: relative;
+
+}
+
+
+
+.nav-links a i {
+
+    font-size: 11px;
+
+}
+
+
+
+/* ACTIVE */
+
+.nav-links a.active {
+
+    color: #ffc400;
+
+}
+
+
+
+.nav-links a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    height: 3px;
+
+    background: #ffc400;
+
+}
+
+
+
+/* LOGIN */
+
+.login-btn {
+
+    height: auto !important;
+
+    padding: 7px 16px;
+
+    border: 1px solid #858ba5;
+
+    border-radius: 5px;
+
+}
+
+
+
+/* REGISTER */
+
+.register-btn {
+
+    height: auto !important;
+
+    padding: 8px 16px;
+
+    background: #6115d9;
+
+    border-radius: 5px;
+
+}
+
+
+
+/* =====================================================
+                    MAIN PAGE
+===================================================== */
+
+.calculator-page {
+
+    width: 92%;
+
+    max-width: 1280px;
+
+    margin: auto;
+
+}
+
+
+
+/* =====================================================
+                    BREADCRUMB
+===================================================== */
+
+.breadcrumb {
+
+    margin-top: 22px;
+
+    margin-bottom: 7px;
+
+    font-size: 11px;
+
+    color: #777b8d;
+
+}
+
+
+
+.breadcrumb a {
+
+    color: #4214b7;
+
+    text-decoration: none;
+
+}
+
+
+
+.breadcrumb span {
+
+    margin: 0 6px;
+
+}
+
+
+
+/* =====================================================
+                 HEADING + IMAGE
+===================================================== */
+
+.calculator-heading {
+
+    width: 100%;
+
+    min-height: 145px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+
+}
+
+
+
+.heading-text {
+
+    flex: 1;
+
+}
+
+
+
+.heading-text h1 {
+
+    font-size: 30px;
+
+    color: #10174d;
+
+    margin-bottom: 8px;
+
+}
+
+
+
+.heading-text h1 span {
+
+    color: #5712d5;
+
+}
+
+
+
+.heading-text p {
+
+    font-size: 12px;
+
+    color: #555b70;
+
+}
+
+
+
+/* IMAGE */
+
+.calculator-image {
+
+    width: 300px;
+
+    height: 140px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-right: 25px;
+
+}
+
+
+
+.calculator-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+}
+
+
+
+/* =====================================================
+                  CALCULATOR CARD
+===================================================== */
+
+.calculator-card {
+
+    background: white;
+
+    border-radius: 8px;
+
+    padding: 25px 28px 22px;
+
+    margin-bottom: 65px;
+
+    box-shadow:
+        0 2px 14px rgba(0, 0, 0, 0.12);
+
+}
+
+
+
+/* =====================================================
+                      SECTION
+===================================================== */
+
+.calculator-section {
+
+    border-bottom: 1px solid #e5e5e5;
+
+    padding-bottom: 25px;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+/* SECTION HEADING */
+
+.section-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #4812c9;
+
+    font-size: 18px;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.section-heading i {
+
+    font-size: 19px;
+
+}
+
+
+
+/* =====================================================
+                     FORM GRID
+===================================================== */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px 28px;
+
+}
+
+
+
+/* FORM */
+
+.form-group label {
+
+    display: block;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    color: #30354d;
+
+    margin-bottom: 7px;
+
+}
+
+
+
+/* INPUT */
+
+.input-wrapper {
+
+    height: 35px;
+
+    border: 1px solid #dedee5;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    background: white;
+
+}
+
+
+
+.input-wrapper span {
+
+    margin-left: 10px;
+
+    font-size: 11px;
+
+    color: #333;
+
+}
+
+
+
+.input-wrapper input {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    padding: 0 10px;
+
+    font-size: 10px;
+
+    background: transparent;
+
+}
+
+
+
+.input-wrapper:focus-within {
+
+    border-color: #5a16d6;
+
+    box-shadow:
+        0 0 0 2px rgba(90, 22, 214, 0.08);
+
+}
+
+
+
+/* =====================================================
+                    INCOME
+===================================================== */
+
+.income-input {
+
+    width: 53%;
+
+}
+
+
+
+/* =====================================================
+                       TIP
+===================================================== */
+
+.tip-box {
+
+    margin-top: 18px;
+
+    min-height: 40px;
+
+    background: #f2efff;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 8px 13px;
+
+}
+
+
+
+.tip-icon {
+
+    width: 22px;
+
+    height: 22px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #5b16d9;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+
+.tip-icon i {
+
+    font-size: 14px;
+
+}
+
+
+
+.tip-box p {
+
+    font-size: 12px;
+
+    color: #55526d;
+
+}
+
+
+
+.tip-box b {
+
+    color: #4211b5;
+
+}
+
+
+
+/* =====================================================
+                      BUTTONS
+===================================================== */
+
+.calculator-buttons {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 34px;
+
+    margin-top: 27px;
+
+}
+
+
+
+.calculator-buttons button {
+
+    height: 34px;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+}
+
+
+
+/* RESET */
+
+.reset-button {
+
+    background: white;
+
+    color: #5814d3;
+
+    border: 1px solid #6c35dc;
+
+}
+
+
+
+.reset-button:hover {
+
+    background: #f5f1ff;
+
+}
+
+
+
+/* CALCULATE */
+
+.calculate-button {
+
+    background: #5913d8;
+
+    color: white;
+
+    border: 1px solid #5913d8;
+
+}
+
+
+
+.calculate-button:hover {
+
+    background: #4510ad;
+
+}
+
+
+
+/* =====================================================
+                       RESULT
+===================================================== */
+
+.result-box {
+
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 18px;
+
+    background: #f4f0ff;
+
+    border-left: 4px solid #5913d8;
+
+    border-radius: 5px;
+
+}
+
+
+
+.result-box h3 {
+
+    color: #4811c1;
+
+    font-size: 15px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.result-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid #ddd;
+
+    font-size: 11px;
+
+}
+
+
+
+.result-row strong {
+
+    color: #5011c8;
+
+}
+
+
+
+/* =====================================================
+                       FOOTER
+===================================================== */
+
+.footer {
+
+    background: #06164b;
+
+    color: white;
+
+    padding: 27px 5% 0;
+
+}
+
+
+
+.footer-container {
+
+    max-width: 1280px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
+
+    gap: 35px;
+
+    padding-bottom: 25px;
+
+}
+
+
+
+/* FOOTER ABOUT */
+
+.footer-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.footer-house {
+
+    font-size: 25px;
+
+}
+
+
+
+.footer-brand h3 {
+
+    font-size: 15px;
+
+}
+
+
+
+.footer-brand p {
+
+    font-size: 8px;
+
+    color: #c8ccdd;
+
+    margin-top: 3px;
+
+}
+
+
+
+.footer-about > span {
+
+    display: block;
+
+    max-width: 190px;
+
+    font-size: 9px;
+
+    line-height: 1.8;
+
+    color: #e0e2eb;
+
+}
+
+
+
+/* FOOTER COLUMNS */
+
+.footer-column {
+
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+
+    padding-left: 28px;
+
+}
+
+
+
+.footer-column h4 {
+
+    font-size: 11px;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.footer-column a {
+
+    display: block;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.footer-column a:hover {
+
+    color: #ffc400;
+
+}
+
+
+
+/* PLAN BOX */
+
+.plan-box {
+
+    background: linear-gradient(
+        135deg,
+        #4e13bd,
+        #30118d
+    );
+
+    border-radius: 6px;
+
+    padding: 18px;
+
+    min-height: 120px;
+
+    position: relative;
+
+}
+
+
+
+.plan-box h3 {
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+
+}
+
+
+
+.plan-box p {
+
+    font-size: 9px;
+
+    line-height: 1.6;
+
+    max-width: 180px;
+
+}
+
+
+
+.plan-icon {
+
+    position: absolute;
+
+    right: 18px;
+
+    bottom: 15px;
+
+    font-size: 35px;
+
+    opacity: 0.2;
+
+}
+
+
+
+/* COPYRIGHT */
+
+.copyright {
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    text-align: center;
+
+    padding: 12px 0;
+
+    font-size: 9px;
+
+    color: #d9dbe5;
+
+}
+
+
+
+/* =====================================================
+                     RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+
+        gap: 12px;
+
+    }
+
+    .nav-links a {
+
+        font-size: 10px;
+
+    }
+
+    .calculator-image {
+
+        width: 250px;
+
+    }
+
+}
+
+
+
+@media (max-width: 800px) {
+
+    .navbar {
+
+        height: auto;
+
+        padding: 12px 4%;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+    .nav-links {
+
+        height: auto;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+    .nav-links a {
+
+        height: auto;
+
+        padding: 6px 0;
+
+    }
+
+    .nav-links a.active::after {
+
+        display: none;
+
+    }
+
+    .calculator-heading {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+    .calculator-image {
+
+        width: 280px;
+
+        height: 130px;
+
+        margin: 10px auto;
+
+    }
+
+    .form-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .income-input {
+
+        width: 100%;
+
+    }
+
+    .footer-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+
+@media (max-width: 550px) {
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .calculator-buttons {
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+    }
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .footer-column {
+
+        border-left: none;
+
+        padding-left: 0;
+
+    }
+
+}

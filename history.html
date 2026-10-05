@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Analyzer - History</title>
+
+    <link rel="stylesheet" href="history.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo-section">
+        <div class="logo">
+            <i class="fa-solid fa-house"></i>
+        </div>
+
+        <div>
+            <h2>Rent Analyzer</h2>
+            <span>Smart Rent Planning</span>
+        </div>
+    </div>
+
+    <nav>
+        <a href="index.html" class="active">
+            <i class="fa-solid fa-house"></i> Home
+        </a>
+
+        <a href="calculator.html">
+            <i class="fa-solid fa-calculator"></i>
+             Calculator
+</a>
+
+       <a href="analyzer.html" class="btn">
+    Analyze Rent
+</a>
+
+        <a href="history.html">
+            <i class="fa-solid fa-clock-rotate-left"></i> History
+        </a>
+
+        <a href="profile.html">
+            <i class="fa-solid fa-user"></i> Profile
+        </a>
+        <a href="register.html" class="menu-item">
+                <i data-lucide="register"></i>
+                register
+            </a>
+    </nav>
+
+    <div class="auth-buttons">
+
+    <button class="login"
+            onclick="window.location.href='login.html'">
+        Login
+    </button>
+
+    <button class="register">
+        Register
+    </button>
+
+</div>
+
+</header>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+
+        <div class="logo-area">
+            <div class="logo-icon">
+                <i data-lucide="house"></i>
+            </div>
+
+            <div>
+                <h2>Rent Analyzer</h2>
+                <p>Smart Rent Planning</p>
+            </div>
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="#" class="menu-item">
+                <i data-lucide="house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="calculator.html" class="menu-item">
+                <i data-lucide="calculator"></i>
+                <span>Calculator</span>
+            </a>
+
+            <a href="analyzer.html" class="menu-item">
+                <i data-lucide="chart-column"></i>
+                <span>Analyzer</span>
+            </a>
+
+            <a href="history.html" class="menu-item active">
+                <i data-lucide="history"></i>
+                <span>History</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="pie-chart"></i>
+                <span>Reports</span>
+            </a>
+
+            <a href="profile.html" class="menu-item">
+                <i data-lucide="user-round"></i>
+                <span>Profile</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="settings"></i>
+                <span>Settings</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="headphones"></i>
+                <span>Support</span>
+            </a>
+            <a href="register.html" class="menu-item">
+                <i data-lucide="register"></i>
+                register
+            </a>
+
+        </nav>
+
+
+        <div class="logout">
+            <i data-lucide="power"></i>
+            <span>Logout</span>
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+    <main class="main">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <button class="hamburger">
+                <i data-lucide="menu"></i>
+            </button>
+
+            <div class="top-right">
+
+                <div class="notification">
+                    <i data-lucide="bell"></i>
+                    <span>3</span>
+                </div>
+
+                <div class="profile">
+
+                    <div class="profile-img">
+                        
+                    </div>
+
+                    <div class="profile-text">
+                        <small>Welcome,</small>
+                        <strong>Shreya Sanap</strong>
+                    </div>
+
+                    <i data-lucide="chevron-down"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= CONTENT ================= -->
+        <section class="content">
+
+            <!-- PAGE HEADER -->
+            <div class="page-header">
+
+                <div>
+                    <h1>History</h1>
+
+                    <div class="breadcrumb">
+                        <span>Dashboard</span>
+                        <i data-lucide="chevron-right"></i>
+                        <p>History</p>
+                    </div>
+                </div>
+
+                <button class="new-btn">
+                    <i data-lucide="plus"></i>
+                    New Calculation
+                </button>
+
+            </div>
+
+
+            <!-- ================= STAT CARDS ================= -->
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="card-icon purple">
+                        <i data-lucide="calculator"></i>
+                    </div>
+
+                    <div class="card-info">
+                        <p>Total Calculations</p>
+                        <h2>28</h2>
+                        <span>All time calculations</span>
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon green">
+                        <i data-lucide="chart-line"></i>
+                    </div>
+
+                    <div class="card-info">
+                        <p>Average Monthly Cost</p>
+                        <h2>₹ 18,750</h2>
+                        <span>Average of all records</span>
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon orange">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+
+                    <div class="card-info">
+                        <p>Highest Monthly Cost</p>
+                        <h2>₹ 32,500</h2>
+                        <span>On 12 May 2024</span>
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon pink">
+                        <i data-lucide="arrow-down"></i>
+                    </div>
+
+                    <div class="card-info">
+                        <p>Lowest Monthly Cost</p>
+                        <h2>₹ 9,800</h2>
+                        <span>On 03 Feb 2024</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= FILTER ================= -->
+            <div class="filter-box">
+
+                <div class="filter">
+
+                    <i data-lucide="calendar"></i>
+                    <input type="text" placeholder="Select Date Range">
+
+                </div>
+
+
+                <div class="filter select-box">
+
+                    <select>
+                        <option>All Property Types</option>
+                        <option>1 BHK</option>
+                        <option>2 BHK</option>
+                        <option>3 BHK</option>
+                        <option>Shop</option>
+                    </select>
+
+                    <i data-lucide="chevron-down"></i>
+
+                </div>
+
+
+                <div class="filter select-box">
+
+                    <select>
+                        <option>All Locations</option>
+                        <option>Pune</option>
+                        <option>Mumbai</option>
+                        <option>Nashik</option>
+                        <option>Nagpur</option>
+                        <option>Chinchwad</option>
+                    </select>
+
+                    <i data-lucide="chevron-down"></i>
+
+                </div>
+
+
+                <div class="search">
+
+                    <i data-lucide="search"></i>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search records..."
+                    >
+
+                </div>
+
+
+                <button class="reset-btn" onclick="resetFilters()">
+                    <i data-lucide="rotate-ccw"></i>
+                    Reset
+                </button>
+
+            </div>
+
+
+            <!-- ================= TABLE ================= -->
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>#</th>
+                            <th>Date</th>
+                            <th>Property Type</th>
+                            <th>Location</th>
+                            <th>Monthly Rent</th>
+                            <th>Monthly Cost</th>
+                            <th>Yearly Cost</th>
+                            <th>Rent % of Income</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="tableBody">
+
+                        <tr>
+                            <td>1</td>
+                            <td>19 May 2024</td>
+                            <td>2 BHK</td>
+                            <td>Pune</td>
+                            <td>₹ 15,000</td>
+                            <td>₹ 18,750</td>
+                            <td>₹ 2,25,000</td>
+                            <td>31.25%</td>
+                            <td><span class="status moderate">Moderate</span></td>
+                            <td>
+                                <button class="view-btn">
+                                    <i data-lucide="eye"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>2</td>
+                            <td>12 May 2024</td>
+                            <td>3 BHK</td>
+                            <td>Mumbai</td>
+                            <td>₹ 25,000</td>
+                            <td>₹ 32,500</td>
+                            <td>₹ 3,90,000</td>
+                            <td>36.11%</td>
+                            <td><span class="status high">High</span></td>
+                            <td>
+                                <button class="view-btn">
+                                    <i data-lucide="eye"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>3</td>
+                            <td>05 May 2024</td>
+                            <td>1 BHK</td>
+                            <td>Nashik</td>
+                            <td>₹ 10,000</td>
+                            <td>₹ 12,800</td>
+                            <td>₹ 1,53,600</td>
+                            <td>25.60%</td>
+                            <td><span class="status affordable">Affordable</span></td>
+                            <td>
+                                <button class="view-btn">
+                                    <i data-lucide="eye"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>4</td>
+                            <td>28 Apr 2024</td>
+                            <td>2 BHK</td>
+                            <td>Pune</td>
+                            <td>₹ 16,000</td>
+                            <td>₹ 19,950</td>
+                            <td>₹ 2,39,400</td>
+                            <td>33.25%</td>
+                            <td><span class="status moderate">Moderate</span></td>
+                            <td>
+                                <button class="view-btn">
+                                    <i data-lucide="eye"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>5</td>
+                            <td>15 Apr 2024</td>
+                            <td>Shop</td>
+                            <td>Nagpur</td>
+                            <td>₹ 20,000</td>
+                            <td>₹ 22,600</td>
+                            <td>₹ 2,71,200</td>
+                            <td>30.13%</td>
+                            <td><span class="status moderate">Moderate</span></td>
+                            <td>
+                                <button class="view-btn">
+                                    <i data-lucide="eye"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>6</td>
+                            <td>03 Feb 2024</td>
+                            <td>1 BHK</td>
+                            <td>Chinchwad</td>
+                            <td>₹ 8,000</td>
+                            <td>₹ 9,800</td>
+                            <td>₹ 1,17,600</td>
+                            <td>19.60%</td>
+                            <td><span class="status affordable">Affordable</span></td>
+                            <td>
+                                <button class="view-btn">
+                                    <i data-lucide="eye"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+
+                <!-- ================= TABLE FOOTER ================= -->
+                <div class="table-footer">
+
+                    <p>Showing 1 to 6 of 28 records</p>
+
+                    <div class="pagination">
+
+                        <button>
+                            <i data-lucide="chevron-left"></i>
+                        </button>
+
+                        <button class="page active">1</button>
+                        <button class="page">2</button>
+                        <button class="page">3</button>
+                        <button class="page">4</button>
+                        <button class="page">5</button>
+
+                        <button>
+                            <i data-lucide="chevron-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="history.js"></script>
+
+<script>
+    lucide.createIcons();
+</script>
+
+</body>
+</html>

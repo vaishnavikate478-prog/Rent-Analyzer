@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rent Analyzer - Register</title>
+
+    <link rel="stylesheet" href="register.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-house">
+            <i data-lucide="house"></i>
+        </div>
+
+        <div>
+            <h2>Rent <span>Analyzer</span></h2>
+            <p>Smart Rent Planning</p>
+        </div>
+
+    </div>
+
+
+    <nav class="nav-links">
+
+        <a href="index.html">
+            <i data-lucide="house"></i>
+            Home
+        </a>
+
+        <a href="calculator.html">
+            <i data-lucide="calculator"></i>
+            Calculator
+        </a>
+
+        <a href="analyzer.html">
+            <i data-lucide="chart-column"></i>
+            Analyzer
+        </a>
+
+        <a href="history.html">
+            <i data-lucide="history"></i>
+            History
+        </a>
+
+        <a href="profile.html">
+            <i data-lucide="user-round"></i>
+            Profile
+        </a>
+         
+    </nav>
+
+
+    <div class="auth-buttons">
+
+        <button class="login-btn">
+            Login
+        </button>
+
+       
+    </div>
+
+</header>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="register-page">
+
+
+    <!-- ================= LEFT SIDE ================= -->
+
+    <section class="left-section">
+
+
+        <div class="left-content">
+
+            <h1>
+                Create Your Account
+                <br>
+                <span>and Plan Better</span>
+            </h1>
+
+
+            <p class="description">
+                Join Rent Analyzer and take control of your
+                rental expenses. Calculate, analyze and save smarter.
+            </p>
+
+
+
+            <!-- FEATURE 1 -->
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    <i data-lucide="calculator"></i>
+                </div>
+
+                <div>
+
+                    <h3>Accurate Calculations</h3>
+
+                    <p>
+                        Calculate monthly & yearly rent cost
+                        <br>
+                        with ease.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FEATURE 2 -->
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    <i data-lucide="chart-column"></i>
+                </div>
+
+                <div>
+
+                    <h3>Smart Analysis</h3>
+
+                    <p>
+                        Know if rent fits your income and
+                        <br>
+                        plan your budget.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FEATURE 3 -->
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    <i data-lucide="history"></i>
+                </div>
+
+                <div>
+
+                    <h3>History Tracking</h3>
+
+                    <p>
+                        View and compare your past
+                        <br>
+                        calculations anytime.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FEATURE 4 -->
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    <i data-lucide="shield-check"></i>
+                </div>
+
+                <div>
+
+                    <h3>Secure & Private</h3>
+
+                    <p>
+                        Your data is safe with us and will
+                        <br>
+                        never be shared.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- HOUSE IMAGE -->
+
+        <div class="house-image">
+
+            <img
+                src="house.jpg"
+                alt="Rent Analyzer"
+            >
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= RIGHT SIDE ================= -->
+
+    <section class="form-section">
+
+
+        <div class="form-card">
+
+
+            <div class="form-heading">
+
+                <h1>Create Account</h1>
+
+                <p>
+                    Fill in the details below to create your account
+                </p>
+
+            </div>
+
+
+
+            <form id="registerForm">
+
+
+                <!-- ROW 1 -->
+
+                <div class="form-row">
+
+
+                    <!-- FULL NAME -->
+
+                    <div class="form-group">
+
+                        <label>Full Name</label>
+
+                        <div class="input-box">
+
+                            <i data-lucide="user-round"></i>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label>Email Address</label>
+
+                        <div class="input-box">
+
+                            <i data-lucide="mail"></i>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ROW 2 -->
+
+                <div class="form-row">
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label>Password</label>
+
+                        <div class="input-box">
+
+                            <i data-lucide="lock"></i>
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Enter your password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="eye-btn"
+                                onclick="togglePassword('password', this)"
+                            >
+                                <i data-lucide="eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CONFIRM PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label>Confirm Password</label>
+
+                        <div class="input-box">
+
+                            <i data-lucide="lock"></i>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                placeholder="Confirm your password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="eye-btn"
+                                onclick="togglePassword('confirmPassword', this)"
+                            >
+                                <i data-lucide="eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ROW 3 -->
+
+                <div class="form-row">
+
+
+                    <!-- PHONE -->
+
+                    <div class="form-group">
+
+                        <label>Phone Number</label>
+
+                        <div class="input-box">
+
+                            <i data-lucide="phone"></i>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="+91 98765 43210"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- DOB -->
+
+                    <div class="form-group">
+
+                        <label>Date of Birth</label>
+
+                        <div class="input-box">
+
+                            <i data-lucide="calendar"></i>
+
+                            <input
+                                type="date"
+                                id="dob"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- LOCATION -->
+
+                <div class="form-group full">
+
+                    <label>Location</label>
+
+                    <div class="input-box">
+
+                        <i data-lucide="map-pin"></i>
+
+                        <select id="location" required>
+
+                            <option value="">
+                                Enter your city
+                            </option>
+
+                            <option value="Pune">
+                                Pune
+                            </option>
+
+                            <option value="Mumbai">
+                                Mumbai
+                            </option>
+
+                            <option value="Nashik">
+                                Nashik
+                            </option>
+
+                            <option value="Nagpur">
+                                Nagpur
+                            </option>
+
+                            <option value="Chinchwad">
+                                Chinchwad
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                        <i
+                            class="select-arrow"
+                            data-lucide="chevron-down"
+                        ></i>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TERMS -->
+
+                <div class="terms">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        required
+                    >
+
+                    <label for="terms">
+
+                        I agree to the
+                        <a href="#">Terms of Service</a>
+                        and
+                        <a href="#">Privacy Policy</a>
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- REGISTER BUTTON -->
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+
+                    Register
+
+                    <i data-lucide="user-plus"></i>
+
+                </button>
+
+
+
+                <!-- DIVIDER -->
+
+                <div class="divider">
+
+                    <span></span>
+
+                    <p>or register with</p>
+
+                    <span></span>
+
+                </div>
+
+
+
+                <!-- SOCIAL -->
+
+                <div class="social-buttons">
+
+
+                    <button
+                        type="button"
+                        class="social-btn"
+                    >
+
+                        <span class="google">
+                            G
+                        </span>
+
+                        Google
+
+                    </button>
+
+
+
+                    <button
+                        type="button"
+                        class="social-btn"
+                    >
+
+                        <span class="facebook">
+                            f
+                        </span>
+
+                        Facebook
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- LOGIN -->
+
+                <div class="login-text">
+
+                    Already have an account?
+
+                    <a href="#">
+                        Login here
+                    </a>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="register.js"></script>
+
+<script>
+    lucide.createIcons();
+</script>
+
+</body>
+</html>

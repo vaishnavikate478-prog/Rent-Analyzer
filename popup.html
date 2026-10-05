@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Popup</title>
+
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+    <!-- Login Popup -->
+    <div class="login-overlay">
+
+        <div class="login-popup">
+
+            <!-- Close Button -->
+            <button class="close-btn">&times;</button>
+
+            <!-- Header -->
+            <div class="login-header">
+                <h1>Rent Analyzer</h1>
+                <p>Smart Rent Planning</p>
+            </div>
+
+            <h2>Welcome Back!</h2>
+
+            <p class="welcome-text">
+                Login to continue to your account
+            </p>
+
+
+            <!-- Login As -->
+            <label>Login As</label>
+
+            <div class="role-selection">
+
+                <button class="role-btn active">
+                    👤 Tenant
+                </button>
+
+                <button class="role-btn">
+                    🏠 Landlord
+                </button>
+
+            </div>
+
+
+            <!-- Email -->
+            <label>Email Address</label>
+
+            <input
+                type="email"
+                placeholder="Enter your email"
+            >
+
+
+            <!-- Password -->
+            <label>Password</label>
+
+            <input
+                type="password"
+                placeholder="Enter your password"
+            >
+
+
+            <!-- Options -->
+            <div class="login-options">
+
+                <label class="remember">
+                    <input type="checkbox">
+                    Remember me
+                </label>
+
+                <a href="#">Forgot Password?</a>
+
+            </div>
+
+
+            <!-- Login -->
+            <button class="login-button">
+                Login →
+            </button>
+
+
+            <!-- Register -->
+            <p class="register-text">
+                Don't have an account?
+                <a href="register.html">Register</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <script>
+    const roleButtons = document.querySelectorAll(".role-btn");
+
+    roleButtons.forEach(button => {
+        button.addEventListener("click", function () {
+
+            // Remove active from all buttons
+            roleButtons.forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            // Add active to clicked button
+            this.classList.add("active");
+        });
+    });
+</script>
+
+<script>
+    const loginButton = document.querySelector(".login-button");
+
+    loginButton.addEventListener("click", function () {
+
+        const email = document.querySelector('input[type="email"]').value;
+        const password = document.querySelector('input[type="password"]').value;
+
+        const selectedRole = document.querySelector(".role-btn.active").textContent.trim();
+
+        if (email === "" || password === "") {
+            alert("Please enter Email and Password.");
+            return;
+        }
+
+        if (selectedRole.includes("Tenant")) {
+            window.parent.location.href = "tenant-dashboard.html";
+        } 
+        else {
+            window.parent.location.href = "landlord-dashboard.html";
+        }
+
+    });
+</script>
+</body>
+</html>
