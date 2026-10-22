@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f5fb;
+    color: #292d43;
+}
+
+.navbar {
+    background: #202033;
+    color: white;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    font-size: 35px;
+    color: #9b9aff;
+}
+
+.brand h2 {
+    font-size: 21px;
+}
+
+.brand small {
+    color: #c2c2d5;
+}
+
+nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #dedeee;
+    text-decoration: none;
+    padding: 10px 13px;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+nav a:hover,
+nav a.active {
+    background: #5555d9;
+    color: white;
+}
+
+.container {
+    max-width: 1250px;
+    margin: auto;
+    padding: 30px 22px;
+}
+
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.welcome h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.welcome p,
+.subtitle {
+    color: #777b91;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.date {
+    background: white;
+    padding: 12px 16px;
+    border-radius: 9px;
+    font-size: 13px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.stat-card,
+.panel {
+    background: white;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 4px 18px rgba(40, 45, 80, 0.05);
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    background: #ededff;
+    color: #5555d9;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.stat-card p {
+    color: #777b91;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.stat-card h2 {
+    font-size: 22px;
+    overflow-wrap: anywhere;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 22px;
+    align-items: start;
+}
+
+.panel h2 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.panel .subtitle {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 16px 0 8px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dedfee;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: #fcfcff;
+}
+
+input:focus {
+    border-color: #5555d9;
+    box-shadow: 0 0 0 3px #eeeeff;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 18px;
+}
+
+.primary-btn {
+    width: 100%;
+    background: #5555d9;
+    color: white;
+    font-weight: bold;
+}
+
+.primary-btn:hover {
+    background: #4141b8;
+}
+
+.secondary-btn {
+    background: #ededff;
+    color: #4848c6;
+}
+
+.right-column {
+    display: grid;
+    gap: 22px;
+}
+
+.analysis-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eeeef5;
+    font-size: 14px;
+}
+
+.analysis-item span {
+    color: #777b91;
+}
+
+.analysis-item strong {
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 20px;
+    background: #ededf5;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0;
+    background: #5555d9;
+    transition: width 0.3s;
+}
+
+.advice {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666b80;
+}
+
+.profile-icon {
+    background: #ededff;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    margin: 20px auto 12px;
+}
+
+#profile {
+    text-align: center;
+}
+
+#profile h3 {
+    margin-bottom: 7px;
+}
+
+#profile p {
+    color: #777b91;
+    font-size: 14px;
+    margin: 7px 0;
+}
+
+.result {
+    background: #f5f5ff;
+    border-radius: 10px;
+    padding: 18px;
+    margin-top: 22px;
+}
+
+.result h3 {
+    margin-bottom: 12px;
+}
+
+.result p {
+    margin: 10px 0;
+    overflow-wrap: anywhere;
+}
+
+.hidden {
+    display: none;
+}
+
+.history-panel {
+    margin-top: 25px;
+}
+
+.history-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    min-width: 550px;
+}
+
+th {
+    background: #252538;
+    color: white;
+    text-align: left;
+}
+
+th, td {
+    padding: 14px;
+    border-bottom: 1px solid #eeeeF5;
+    font-size: 13px;
+}
+
+td {
+    overflow-wrap: anywhere;
+}
+
+footer {
+    text-align: center;
+    padding: 28px 10px 10px;
+    color: #85889b;
+    font-size: 13px;
+}
+
+@media (max-width: 950px) {
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .container {
+        padding: 22px 12px;
+    }
+
+    .navbar {
+        padding: 15px;
+    }
+
+    nav a {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome h1 {
+        font-size: 23px;
+    }
+
+    .stat-card,
+    .panel {
+        padding: 17px;
+    }
+}
+/* Tenant page size increase */
+
+.container {
+    max-width: 1450px;
+    padding: 35px 28px;
+}
+
+.welcome h1 {
+    font-size: 34px;
+}
+
+.welcome p,
+.subtitle {
+    font-size: 17px;
+}
+
+.stat-card p {
+    font-size: 16px;
+}
+
+.stat-card h2 {
+    font-size: 28px;
+}
+
+.panel h2 {
+    font-size: 26px;
+}
+
+form label {
+    font-size: 17px;
+}
+
+input {
+    font-size: 17px;
+    padding: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    font-size: 17px;
+    padding: 15px 20px;
+}
+
+.analysis-item {
+    font-size: 17px;
+}
+
+.advice {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+th, td {
+    font-size: 16px;
+    padding: 16px;
+}

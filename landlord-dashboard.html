@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landlord Dashboard | Rent Analyzer</title>
+    <link rel="stylesheet" href="landlord-dashboard.css">
+    <script src="landlord-dashboard.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="brand">
+        <div class="brand-icon">⌂</div>
+        <div>
+            <h2>Rent Analyzer</h2>
+            <small>Smart Rent Planning</small>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#dashboard" class="active">Dashboard</a>
+        <a href="#properties">My Properties</a>
+        <a href="#tenants">My Tenants</a>
+        <a href="#requests">Requests</a>
+        <a href="#rent">Rent Management</a>
+        <a href="#expenses">Expenses</a>
+        <a href="#reports">Reports</a>
+    </nav>
+
+    <div class="user-info">
+        <div class="avatar">L</div>
+        <div>
+            <strong id="navName">Landlord</strong>
+            <small>Property Owner</small>
+        </div>
+    </div>
+</header>
+
+<main class="container" id="dashboard">
+
+    <section class="welcome">
+        <div>
+            <p class="eyebrow">LANDLORD PANEL</p>
+            <h1>Welcome back, <span id="welcomeName">Landlord</span>!</h1>
+            <p>Manage your rental properties and track your income easily.</p>
+        </div>
+        <div class="date-box">
+            <span>📅</span>
+            <span id="currentDate"></span>
+        </div>
+    </section>
+
+    <section class="stats-grid">
+        <article class="stat-card">
+            <div class="stat-icon purple">⌂</div>
+            <div>
+                <p>Total Properties</p>
+                <h2 id="propertyCount">0</h2>
+                <small>Your rental properties</small>
+            </div>
+        </article>
+
+        <article class="stat-card">
+            <div class="stat-icon blue">♟</div>
+            <div>
+                <p>Active Tenants</p>
+                <h2 id="tenantCount">0</h2>
+                <small>Currently listed tenants</small>
+            </div>
+        </article>
+
+        <article class="stat-card">
+            <div class="stat-icon green">₹</div>
+            <div>
+                <p>Monthly Rent</p>
+                <h2 id="monthlyRent">₹0</h2>
+                <small>Expected monthly income</small>
+            </div>
+        </article>
+
+        <article class="stat-card">
+            <div class="stat-icon orange">✉</div>
+            <div>
+                <p>Pending Requests</p>
+                <h2 id="requestCount">0</h2>
+                <small>Requests awaiting action</small>
+            </div>
+        </article>
+    </section>
+
+    <section class="section-heading">
+        <div>
+            <h2>Quick Actions</h2>
+            <p>Access your important tools.</p>
+        </div>
+        <button class="primary-btn" id="addPropertyBtn">+ Add Property</button>
+    </section>
+
+    <section class="actions-grid">
+        <a class="action-card" href="#properties">
+            <span class="action-icon">🏠</span>
+            <h3>My Properties</h3>
+            <p>View and manage your properties.</p>
+        </a>
+
+        <a class="action-card" href="#tenants">
+            <span class="action-icon">👥</span>
+            <h3>My Tenants</h3>
+            <p>View your tenant details.</p>
+        </a>
+
+        <a class="action-card" href="#requests">
+            <span class="action-icon">📩</span>
+            <h3>Rental Requests</h3>
+            <p>Review pending requests.</p>
+        </a>
+
+        <a class="action-card" href="#rent">
+            <span class="action-icon">💰</span>
+            <h3>Rent Management</h3>
+            <p>Track rent and payments.</p>
+        </a>
+
+        <a class="action-card" href="#expenses">
+            <span class="action-icon">🔧</span>
+            <h3>Maintenance</h3>
+            <p>Track property maintenance.</p>
+        </a>
+
+        <a class="action-card" href="#reports">
+            <span class="action-icon">📊</span>
+            <h3>Reports</h3>
+            <p>Review income and expenses.</p>
+        </a>
+    </section>
+
+    <section class="content-grid">
+        <article class="panel" id="properties">
+            <div class="panel-heading">
+                <div>
+                    <h2>My Properties</h2>
+                    <p>Your rental property list.</p>
+                </div>
+                <button class="outline-btn" id="viewPropertiesBtn">View All</button>
+            </div>
+
+            <div id="propertyList" class="property-list">
+                <div class="empty-state">
+                    <span>🏠</span>
+                    <h3>No properties added</h3>
+                    <p>Click Add Property to add your first property.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="panel" id="requests">
+            <div class="panel-heading">
+                <div>
+                    <h2>Rental Requests</h2>
+                    <p>Manage tenant enquiries.</p>
+                </div>
+                <span class="status pending" id="requestBadge">0 Pending</span>
+            </div>
+
+            <div id="requestList" class="request-list">
+                <div class="empty-state">
+                    <span>📩</span>
+                    <h3>No pending requests</h3>
+                    <p>New rental requests will appear here.</p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section class="content-grid lower-grid">
+        <article class="panel" id="tenants">
+            <div class="panel-heading">
+                <div>
+                    <h2>My Tenants</h2>
+                    <p>Tenant information.</p>
+                </div>
+            </div>
+            <div id="tenantList" class="tenant-list">
+                <div class="empty-state">
+                    <span>👥</span>
+                    <h3>No tenants listed</h3>
+                    <p>Tenant records will appear here when added.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="panel" id="rent">
+            <div class="panel-heading">
+                <div>
+                    <h2>Rent Overview</h2>
+                    <p>Expected income summary.</p>
+                </div>
+            </div>
+
+            <div class="income-box">
+                <span>Expected Monthly Rent</span>
+                <h2 id="overviewMonthly">₹0</h2>
+            </div>
+
+            <div class="income-row">
+                <span>Estimated Yearly Rent</span>
+                <strong id="overviewYearly">₹0</strong>
+            </div>
+
+            <div class="income-row">
+                <span>Number of Properties</span>
+                <strong id="overviewProperties">0</strong>
+            </div>
+
+            <p class="note">These figures are calculated from the properties you add.</p>
+        </article>
+    </section>
+
+    <section class="panel expenses-panel" id="expenses">
+        <div class="panel-heading">
+            <div>
+                <h2>Property Expenses</h2>
+                <p>Record maintenance and other property expenses.</p>
+            </div>
+        </div>
+
+        <form id="expenseForm" class="expense-form">
+            <div class="field">
+                <label for="expenseTitle">Expense Name</label>
+                <input id="expenseTitle" type="text"
+                       placeholder="e.g. Plumbing repair" required>
+            </div>
+
+            <div class="field">
+                <label for="expenseAmount">Amount (₹)</label>
+                <input id="expenseAmount" type="number"
+                       min="1" placeholder="Enter amount" required>
+            </div>
+
+            <button type="submit" class="primary-btn">Add Expense</button>
+        </form>
+
+        <div id="expenseList" class="expense-list">
+            <p class="note">No expenses recorded yet.</p>
+        </div>
+    </section>
+
+    <section class="panel profile-panel" id="reports">
+        <div class="profile-avatar">L</div>
+        <h2>Landlord Profile</h2>
+        <p>Manage your property owner information.</p>
+
+        <form id="profileForm" class="profile-form">
+            <div class="field">
+                <label for="landlordName">Full Name</label>
+                <input id="landlordName" type="text"
+                       placeholder="Enter your name" value="Landlord" required>
+            </div>
+            <div class="field">
+                <label for="landlordEmail">Email Address</label>
+                <input id="landlordEmail" type="email"
+                       placeholder="Enter your email">
+            </div>
+            <button type="submit" class="primary-btn">Save Profile</button>
+        </form>
+
+        <p class="note" id="profileMessage" aria-live="polite"></p>
+    </section>
+
+    <footer>
+        <p>© 2026 Rent Analyzer | Smart Rent Planning</p>
+    </footer>
+
+</main>
+
+<!-- Add Property Popup -->
+<div class="modal" id="propertyModal" hidden>
+    <div class="modal-card">
+        <div class="modal-heading">
+            <div>
+                <h2>Add New Property</h2>
+                <p>Enter your rental property details.</p>
+            </div>
+            <button type="button" class="close-btn" id="closeModal"
+                    aria-label="Close">×</button>
+        </div>
+
+        <form id="propertyForm">
+            <div class="field">
+                <label for="propertyName">Property Name</label>
+                <input id="propertyName" type="text"
+                       placeholder="e.g. Green Valley Apartment" required>
+            </div>
+
+            <div class="field">
+                <label for="propertyLocation">Location</label>
+                <input id="propertyLocation" type="text"
+                       placeholder="Enter city or area" required>
+            </div>
+
+            <div class="field">
+                <label for="propertyType">Property Type</label>
+                <select id="propertyType" required>
+                    <option value="">Select type</option>
+                    <option>Apartment</option>
+                    <option>Flat</option>
+                    <option>House</option>
+                    <option>Room</option>
+                    <option>Commercial</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="propertyRent">Monthly Rent (₹)</label>
+                <input id="propertyRent" type="number"
+                       min="1" placeholder="Enter monthly rent" required>
+            </div>
+
+            <div class="field">
+                <label for="propertyTenant">Tenant Name (optional)</label>
+                <input id="propertyTenant" type="text"
+                       placeholder="Enter tenant name">
+            </div>
+
+            <button type="submit" class="primary-btn full-btn">
+                Save Property
+            </button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenant Dashboard | Rent Analyzer</title>
+    <link rel="stylesheet" href="tenant-dashboard.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="brand">
+        <span class="brand-icon">⌂</span>
+        <div>
+            <h2>Rent Analyzer</h2>
+            <small>Smart Rent Planning</small>
+        </div>
+    </div>
+
+    <nav>
+        <a class="active" href="#dashboard">Dashboard</a>
+        
+    </nav>
+</header>
+
+<main class="container" id="dashboard">
+
+    <section class="welcome">
+        <div>
+            <h1>Welcome back, Tenant!</h1>
+            <p>Manage your rent, analyze expenses and plan your budget.</p>
+        </div>
+        <span class="date" id="today"></span>
+    </section>
+
+    <section class="stats">
+        <div class="stat-card">
+            <span class="icon">₹</span>
+            <div>
+                <p>Monthly Rent Cost</p>
+                <h2 id="monthlyStat">₹0</h2>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <span class="icon">▤</span>
+            <div>
+                <p>Yearly Rent Cost</p>
+                <h2 id="yearlyStat">₹0</h2>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <span class="icon">⌂</span>
+            <div>
+                <p>Initial Payment</p>
+                <h2 id="initialStat">₹0</h2>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <span class="icon">◷</span>
+            <div>
+                <p>Total Calculations</p>
+                <h2 id="countStat">0</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-grid">
+
+        <div class="panel" id="calculator">
+            <h2>Rent Calculator</h2>
+            <p class="subtitle">Enter your rental expenses below.</p>
+
+            <form id="rentForm">
+                <label>Monthly Rent (₹)</label>
+                <input type="number" id="rent" min="0"
+                    placeholder="Enter monthly rent" required>
+
+                <label>Maintenance (₹)</label>
+                <input type="number" id="maintenance" min="0"
+                    value="0" required>
+
+                <label>Parking (₹)</label>
+                <input type="number" id="parking" min="0"
+                    value="0" required>
+
+                <label>Utilities (₹)</label>
+                <input type="number" id="utilities" min="0"
+                    value="0" required>
+
+                <label>Internet / Wi-Fi (₹)</label>
+                <input type="number" id="internet" min="0"
+                    value="0" required>
+
+                <label>Other Monthly Expenses (₹)</label>
+                <input type="number" id="other" min="0"
+                    value="0" required>
+
+                <label>Security Deposit (₹)</label>
+                <input type="number" id="deposit" min="0"
+                    value="0" required>
+
+                <label>Brokerage (₹)</label>
+                <input type="number" id="brokerage" min="0"
+                    value="0" required>
+
+                <label>Monthly Income After Tax (₹)</label>
+                <input type="number" id="income" min="0"
+                    value="0" required>
+
+                <label>Property Location</label>
+                <input type="text" id="location"
+                    placeholder="Enter city or area" required>
+
+                <button type="submit" class="primary-btn">
+                    Calculate Rent
+                </button>
+            </form>
+
+            <div id="result" class="result hidden">
+                <h3>Calculation Results</h3>
+                <p>Monthly Cost: <strong id="monthlyResult">₹0</strong></p>
+                <p>Yearly Cost: <strong id="yearlyResult">₹0</strong></p>
+                <p>Initial Payment: <strong id="initialResult">₹0</strong></p>
+                <p>Rent to Income: <strong id="percentageResult">0%</strong></p>
+                <p id="advice"></p>
+            </div>
+        </div>
+
+        <div class="right-column">
+
+            <div class="panel" id="analysis">
+                <h2>Rent Analysis</h2>
+                <p class="subtitle">Understand your rental affordability.</p>
+
+                <div class="analysis-item">
+                    <span>Monthly Rent Expenses</span>
+                    <strong id="analysisMonthly">₹0</strong>
+                </div>
+
+                <div class="analysis-item">
+                    <span>Yearly Expenses</span>
+                    <strong id="analysisYearly">₹0</strong>
+                </div>
+
+                <div class="analysis-item">
+                    <span>Rent Percentage of Income</span>
+                    <strong id="analysisPercent">0%</strong>
+                </div>
+
+                <div class="progress">
+                    <div id="progressBar"></div>
+                </div>
+
+                <p id="analysisAdvice" class="advice">
+                    Calculate your rent to see your analysis.
+                </p>
+            </div>
+
+            <div class="panel" id="profile">
+                <h2>My Profile</h2>
+                <div class="profile-icon">👤</div>
+                <h3 id="profileName">Tenant User</h3>
+                <p>Tenant Account</p>
+                <p>Rent Calculator and Analyzer</p>
+                <button class="secondary-btn" id="editProfile">
+                    Edit Name
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel history-panel" id="history">
+        <div class="history-heading">
+            <div>
+                <h2>Calculation History</h2>
+                <p class="subtitle">Your recent rent calculations.</p>
+            </div>
+            <button class="secondary-btn" id="clearHistory">
+                Clear History
+            </button>
+        </div>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Location</th>
+                        <th>Monthly Cost</th>
+                        <th>Yearly Cost</th>
+                    </tr>
+                </thead>
+                <tbody id="historyBody">
+                    <tr>
+                        <td colspan="4">No calculations yet.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Rent Analyzer | Smart Rent Planning</p>
+    </footer>
+
+</main>
+
+<script src="tenant-dashboard.js"></script>
+</body>
+</html>

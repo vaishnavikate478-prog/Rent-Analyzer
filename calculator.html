@@ -5,704 +5,1430 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Rent Calculator</title>
+    <title>Rent Analyzer - Calculator</title>
 
     <link rel="stylesheet" href="calculator.css">
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
-<nav class="navbar">
+    <!-- ================= NAVBAR ================= -->
 
-    <div class="logo-area">
+    <nav class="navbar">
 
-        <div class="logo-icon">
-            <i class="fa-solid fa-house"></i>
-        </div>
+        <div class="logo">
 
-        <div class="logo-text">
-            <h2>Rent Analyzer</h2>
-            <p>Smart Rent Planning</p>
-        </div>
+            <div class="logo-icon">🏠</div>
 
-    </div>
+            <div class="logo-text">
 
-    <div class="nav-links">
-
-        <a href="index.html">
-            <i class="fa-solid fa-house"></i>
-            Home
-        </a>
-
-        <a href="calculator.html" class="active">
-            <i class="fa-solid fa-calculator"></i>
-            Calculator
-        </a>
-
-        <a href="analyzer.html">
-            <i class="fa-solid fa-chart-column"></i>
-            Analyzer
-        </a>
-
-        <a href="history.html">
-            <i class="fa-solid fa-clock-rotate-left"></i>
-            History
-        </a>
-
-        <a href="profile.html">
-            <i class="fa-solid fa-user"></i>
-            Profile
-        </a>
-
-        <a href="login.html" class="login-btn">
-            Login
-        </a>
-
-        <a href="register.html" class="register-btn">
-            Register
-        </a>
-
-    </div>
-
-</nav>
-
-
-<main class="calculator-page">
-
-    <div class="breadcrumb">
-
-        <a href="index.html">Home</a>
-
-        <span>/</span>
-
-        Calculator
-
-    </div>
-
-
-    <div class="calculator-heading">
-
-        <div class="heading-text">
-
-            <h1>
-                Rent <span>Calculator</span>
-            </h1>
-
-            <p>
-                Enter your rent details to calculate monthly
-                and yearly costs.
-            </p>
-
-        </div>
-
-        <div class="calculator-image">
-
-            <img src="calculator.jpeg"
-                 alt="House and Calculator">
-
-        </div>
-
-    </div>
-
-
-    <div class="calculator-card">
-
-
-        <!-- PROPERTY DETAILS -->
-
-        <section class="calculator-section">
-
-            <h3 class="section-heading">
-
-                <i class="fa-regular fa-calendar-days"></i>
-
-                1. Property Details
-
-            </h3>
-
-
-            <div class="form-grid">
-
-
-                <div class="form-group">
-
-                    <label>
-                        Monthly Rent (Basic)
-                    </label>
-
-                    <div class="input-wrapper">
-
-                        <span>₹</span>
-
-                        <input
-                            type="number"
-                            id="monthlyRent"
-                            placeholder="Enter monthly rent">
-
-                    </div>
-
+                <div class="logo-title">
+                    Rent Analyzer
                 </div>
 
-
-                <div class="form-group">
-
-                    <label>
-                        Security Deposit
-                    </label>
-
-                    <div class="input-wrapper">
-
-                        <span>₹</span>
-
-                        <input
-                            type="number"
-                            id="securityDeposit"
-                            placeholder="Enter security deposit">
-
-                    </div>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>
-                        Brokerage (One-time)
-                    </label>
-
-                    <div class="input-wrapper">
-
-                        <span>₹</span>
-
-                        <input
-                            type="number"
-                            id="brokerage"
-                            placeholder="Enter brokerage amount">
-
-                    </div>
-
+                <div class="logo-subtitle">
+                    Smart Rent Planning
                 </div>
 
             </div>
 
-        </section>
+        </div>
 
 
-        <!-- ADDITIONAL CHARGES -->
+        <div class="nav-links">
 
-        <section class="calculator-section">
+            <a href="index.html">
+                🏠 Home
+            </a>
 
-            <h3 class="section-heading">
 
-                <i class="fa-regular fa-face-smile"></i>
+            <div class="dropdown">
 
-                2. Additional Monthly Charges
+                <a href="calculator.html" class="active">
+                    🧮 Calculator ▾
+                </a>
 
-            </h3>
+                <div class="dropdown-content">
 
+                    <a href="#rent">
+                        🏠 Rent Calculator
+                    </a>
 
-            <div class="form-grid">
+                    <a href="#emi">
+                        🏦 EMI Calculator
+                    </a>
 
+                    <a href="#sip">
+                        📈 SIP Calculator
+                    </a>
 
-                <div class="form-group">
-
-                    <label>
-                        Maintenance
-                    </label>
-
-                    <div class="input-wrapper">
-
-                        <span>₹</span>
-
-                        <input
-                            type="number"
-                            id="maintenance"
-                            placeholder="Enter amount">
-
-                    </div>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>
-                        Parking
-                    </label>
-
-                    <div class="input-wrapper">
-
-                        <span>₹</span>
-
-                        <input
-                            type="number"
-                            id="parking"
-                            placeholder="Enter amount">
-
-                    </div>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>
-                        Utilities (Electricity, Water, Gas)
-                    </label>
-
-                    <div class="input-wrapper">
-
-                        <span>₹</span>
-
-                        <input
-                            type="number"
-                            id="utilities"
-                            placeholder="Enter amount">
-
-                    </div>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>
-                        Internet / Wi-Fi
-                    </label>
-
-                    <div class="input-wrapper">
-
-                        <span>₹</span>
-
-                        <input
-                            type="number"
-                            id="internet"
-                            placeholder="Enter amount">
-
-                    </div>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>
-                        Others
-                    </label>
-
-                    <div class="input-wrapper">
-
-                        <span>₹</span>
-
-                        <input
-                            type="number"
-                            id="others"
-                            placeholder="Enter amount">
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- INCOME -->
-
-        <section class="calculator-section income-section">
-
-            <h3 class="section-heading">
-
-                <i class="fa-regular fa-file-lines"></i>
-
-                3. Income Details
-
-            </h3>
-
-
-            <div class="income-input">
-
-                <div class="form-group">
-
-                    <label>
-                        Monthly Income (After Tax)
-                    </label>
-
-                    <div class="input-wrapper">
-
-                        <span>₹</span>
-
-                        <input
-                            type="number"
-                            id="monthlyIncome"
-                            placeholder="Enter your monthly income">
-
-                    </div>
+                    <a href="#lumpsum">
+                        💵 Lumpsum Calculator
+                    </a>
 
                 </div>
 
             </div>
 
 
-            <div class="tip-box">
+            <a href="analyzer.html">
+                📊 Analyzer
+            </a>
 
-                <div class="tip-icon">
+            <a href="history.html">
+                ↶ History
+            </a>
 
-                    <i class="fa-solid fa-lightbulb"></i>
+            <a href="profile.html">
+                👤 Profile
+            </a>
 
+            <a href="login.html" class="login-btn">
+                Login
+            </a>
+
+            <a href="register.html" class="register-btn">
+                Register
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="calculator-container">
+
+
+        <!-- PAGE HEADER -->
+
+        <div class="page-heading">
+
+            <div>
+
+                <div class="breadcrumb">
+                    Home &nbsp; / &nbsp; Calculator
                 </div>
+
+                <h1>
+                    Financial <span>Calculator</span>
+                </h1>
 
                 <p>
-
-                    <b>Tip:</b>
-
-                    Experts suggest that your total rent
-                    (including all monthly costs) should be
-                    less than 30% of your monthly income.
-
+                    Calculate rent, EMI, SIP and investment returns easily.
                 </p>
 
             </div>
 
+        </div>
+
+
+        <!-- ================= CALCULATOR TABS ================= -->
+
+        <div class="calculator-tabs">
+
+            <button
+                class="tab-btn active"
+                onclick="showCalculator('rent', this)"
+            >
+                🏠 Rent
+            </button>
+
+            <button
+                class="tab-btn"
+                onclick="showCalculator('emi', this)"
+            >
+                🏦 EMI
+            </button>
+
+            <button
+                class="tab-btn"
+                onclick="showCalculator('sip', this)"
+            >
+                📈 SIP
+            </button>
+
+            <button
+                class="tab-btn"
+                onclick="showCalculator('lumpsum', this)"
+            >
+                💵 Lumpsum
+            </button>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- RENT CALCULATOR -->
+        <!-- ================================================= -->
+
+        <section
+            id="rent"
+            class="calculator-section active-section"
+        >
+
+            <div class="section-title">
+
+                <span>🏠</span>
+
+                <div>
+                    <h2>Rent Calculator</h2>
+
+                    <p>
+                        Calculate your monthly and yearly rental cost.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="input-grid">
+
+                <div class="input-group">
+
+                    <label>Monthly Rent (₹)</label>
+
+                    <input
+                        type="number"
+                        id="rentAmount"
+                        placeholder="Enter monthly rent"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Security Deposit (₹)</label>
+
+                    <input
+                        type="number"
+                        id="depositAmount"
+                        placeholder="Enter security deposit"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Brokerage (₹)</label>
+
+                    <input
+                        type="number"
+                        id="brokerageAmount"
+                        placeholder="Enter brokerage"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Maintenance (₹)</label>
+
+                    <input
+                        type="number"
+                        id="maintenanceAmount"
+                        placeholder="Enter maintenance"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Parking (₹)</label>
+
+                    <input
+                        type="number"
+                        id="parkingAmount"
+                        placeholder="Enter parking"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Utilities (₹)</label>
+
+                    <input
+                        type="number"
+                        id="utilitiesAmount"
+                        placeholder="Enter utilities"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="calculate-btn"
+                onclick="calculateRent()"
+            >
+                Calculate Rent
+            </button>
+
+
+            <div
+                id="rentResult"
+                class="result-box"
+            >
+
+                <div class="result-card">
+
+                    <span>Monthly Cost</span>
+
+                    <strong id="monthlyRentResult">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span>Yearly Cost</span>
+
+                    <strong id="yearlyRentResult">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span>First Month Cost</span>
+
+                    <strong id="firstMonthResult">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
         </section>
 
 
-        <!-- BUTTONS -->
+        <!-- ================================================= -->
+        <!-- EMI CALCULATOR -->
+        <!-- ================================================= -->
 
-        <div class="calculator-buttons">
+        <section
+            id="emi"
+            class="calculator-section"
+        >
 
-            <button
-                type="button"
-                class="reset-button"
-                onclick="resetCalculator()">
+            <div class="section-title">
 
-                <i class="fa-solid fa-rotate"></i>
-
-                Reset
-
-            </button>
-
-
-            <button
-                type="button"
-                class="calculate-button"
-                onclick="calculateRent()">
-
-                <i class="fa-solid fa-calculator"></i>
-
-                Calculate
-
-            </button>
-
-        </div>
-
-
-        <!-- RESULT -->
-
-        <div id="resultBox" class="result-box">
-
-            <h3>Calculation Result</h3>
-
-
-            <div class="result-row">
-
-                <span>Monthly Total</span>
-
-                <strong id="monthlyResult">
-                    ₹0
-                </strong>
-
-            </div>
-
-
-            <div class="result-row">
-
-                <span>Yearly Total</span>
-
-                <strong id="yearlyResult">
-                    ₹0
-                </strong>
-
-            </div>
-
-
-            <div class="result-row">
-
-                <span>Income Percentage</span>
-
-                <strong id="percentageResult">
-                    0%
-                </strong>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</main>
-
-
-<footer class="footer">
-
-    <div class="footer-container">
-
-        <div class="footer-about">
-
-            <div class="footer-brand">
-
-                <div class="footer-house">
-                    <i class="fa-solid fa-house"></i>
-                </div>
+                <span>🏦</span>
 
                 <div>
 
-                    <h3>Rent Analyzer</h3>
+                    <h2>EMI Calculator</h2>
 
-                    <p>Smart Rent Planning</p>
+                    <p>
+                        Calculate your monthly loan EMI and total interest.
+                    </p>
 
                 </div>
 
             </div>
 
-            <span>
-                Plan your rent better, understand
-                your expenses and live smarter.
-            </span>
 
-        </div>
+            <div class="input-grid">
 
+                <div class="input-group">
 
-        <div class="footer-column">
+                    <label>Loan Amount (₹)</label>
 
-            <h4>Quick Links</h4>
+                    <input
+                        type="number"
+                        id="loanAmount"
+                        placeholder="Example: 500000"
+                    >
 
-            <a href="index.html">Home</a>
+                </div>
 
-            <a href="calculator.html">Calculator</a>
 
-            <a href="analyzer.html">Analyzer</a>
+                <div class="input-group">
 
-            <a href="history.html">History</a>
+                    <label>Interest Rate (% per year)</label>
 
-            <a href="profile.html">Profile</a>
+                    <input
+                        type="number"
+                        id="interestRate"
+                        step="0.01"
+                        placeholder="Example: 8.5"
+                    >
 
-        </div>
+                </div>
 
 
-        <div class="footer-column">
+                <div class="input-group">
 
-            <h4>Useful</h4>
+                    <label>Loan Tenure (Years)</label>
 
-            <a href="#">About Us</a>
+                    <input
+                        type="number"
+                        id="loanTenure"
+                        placeholder="Example: 5"
+                    >
 
-            <a href="#">How It Works</a>
+                </div>
 
-            <a href="#">Privacy Policy</a>
+            </div>
 
-            <a href="#">Terms & Conditions</a>
 
-            <a href="#">Contact Us</a>
+            <button
+                class="calculate-btn"
+                onclick="calculateEMI()"
+            >
+                Calculate EMI
+            </button>
 
-        </div>
 
+            <div class="result-box">
 
-        <div class="plan-box">
+                <div class="result-card">
 
-            <h3>
-                Plan Better. Spend Smart.
-            </h3>
+                    <span>Monthly EMI</span>
 
-            <p>
-                Make informed rental decisions
-                and manage your budget wisely.
-            </p>
+                    <strong id="emiResult">
+                        ₹0
+                    </strong>
 
-            <i class="fa-solid fa-house plan-icon"></i>
+                </div>
 
-        </div>
 
-    </div>
+                <div class="result-card">
 
+                    <span>Total Interest</span>
 
-    <div class="copyright">
+                    <strong id="totalInterest">
+                        ₹0
+                    </strong>
 
-        © 2024 Rent Analyzer. All rights reserved.
+                </div>
 
-    </div>
 
-</footer>
+                <div class="result-card">
 
+                    <span>Total Payment</span>
 
-<script>
+                    <strong id="totalPayment">
+                        ₹0
+                    </strong>
 
-function calculateRent() {
+                </div>
 
-    /* ==============================
-       GET VALUES FROM INPUTS
-    ============================== */
+            </div>
 
-    let rent =
-        Number(document.getElementById("monthlyRent").value) || 0;
 
-    let securityDeposit =
-        Number(document.getElementById("securityDeposit").value) || 0;
+            <div class="chart-card">
 
-    let brokerage =
-        Number(document.getElementById("brokerage").value) || 0;
+                <h3>
+                    Principal vs Interest
+                </h3>
 
-    let maintenance =
-        Number(document.getElementById("maintenance").value) || 0;
+                <div class="chart-container">
 
-    let parking =
-        Number(document.getElementById("parking").value) || 0;
+                    <canvas id="emiChart"></canvas>
 
-    let utilities =
-        Number(document.getElementById("utilities").value) || 0;
+                </div>
 
-    let internet =
-        Number(document.getElementById("internet").value) || 0;
+            </div>
 
-    let others =
-        Number(document.getElementById("others").value) || 0;
+        </section>
 
-    let income =
-        Number(document.getElementById("monthlyIncome").value) || 0;
 
+        <!-- ================================================= -->
+        <!-- SIP CALCULATOR -->
+        <!-- ================================================= -->
 
-    /* ==============================
-       CALCULATE MONTHLY TOTAL
-    ============================== */
+        <section
+            id="sip"
+            class="calculator-section"
+        >
 
-    let monthlyTotal =
-        rent +
-        maintenance +
-        parking +
-        utilities +
-        internet +
-        others;
+            <div class="section-title">
 
+                <span>📈</span>
 
-    /* ==============================
-       YEARLY MONTHLY COST
-    ============================== */
+                <div>
 
-    let yearlyTotal =
-        monthlyTotal * 12;
+                    <h2>SIP Calculator</h2>
 
+                    <p>
+                        Estimate your SIP investment growth.
+                    </p>
 
-    /* ==============================
-       RENT PERCENTAGE
-    ============================== */
+                </div>
 
-    let percentage = 0;
+            </div>
 
-    if (income > 0) {
 
-        percentage =
-            (monthlyTotal / income) * 100;
+            <div class="input-grid">
 
-    }
+                <div class="input-group">
 
+                    <label>Monthly Investment (₹)</label>
 
-    /* ==============================
-       SHOW RESULT ON CALCULATOR
-    ============================== */
+                    <input
+                        type="number"
+                        id="sipAmount"
+                        placeholder="Example: 5000"
+                    >
 
-    document.getElementById("monthlyResult").innerText =
-        "₹" + monthlyTotal.toLocaleString("en-IN");
+                </div>
 
 
-    document.getElementById("yearlyResult").innerText =
-        "₹" + yearlyTotal.toLocaleString("en-IN");
+                <div class="input-group">
 
+                    <label>Expected Return (% per year)</label>
 
-    document.getElementById("percentageResult").innerText =
-        percentage.toFixed(1) + "%";
+                    <input
+                        type="number"
+                        id="sipRate"
+                        step="0.1"
+                        placeholder="Example: 12"
+                    >
 
+                </div>
 
-    document.getElementById("resultBox").style.display =
-        "block";
 
+                <div class="input-group">
 
-    /* =================================================
-       SAVE ALL VALUES FOR ANALYZER PAGE
-    ================================================= */
+                    <label>Investment Duration (Years)</label>
 
-    const rentData = {
+                    <input
+                        type="number"
+                        id="sipYears"
+                        placeholder="Example: 10"
+                    >
 
-        monthlyRent: rent,
+                </div>
 
-        securityDeposit: securityDeposit,
+            </div>
 
-        brokerage: brokerage,
 
-        maintenance: maintenance,
+            <button
+                class="calculate-btn"
+                onclick="calculateSIP()"
+            >
+                Calculate SIP
+            </button>
 
-        parking: parking,
 
-        utilities: utilities,
+            <div class="result-box">
 
-        internet: internet,
+                <div class="result-card">
 
-        others: others,
+                    <span>Total Invested</span>
 
-        monthlyIncome: income,
+                    <strong id="sipInvested">
+                        ₹0
+                    </strong>
 
-        monthlyTotal: monthlyTotal,
+                </div>
 
-        yearlyTotal: yearlyTotal,
 
-        percentage: percentage
+                <div class="result-card">
 
-    };
+                    <span>Estimated Returns</span>
 
+                    <strong id="sipReturns">
+                        ₹0
+                    </strong>
 
-    /* SAVE DATA */
+                </div>
 
-    localStorage.setItem(
-        "rentAnalyzerData",
-        JSON.stringify(rentData)
-    );
 
+                <div class="result-card">
 
-    /* =================================================
-       OPEN ANALYZER PAGE
-    ================================================= */
+                    <span>Final Amount</span>
 
-    window.location.href = "analyzer.html";
+                    <strong id="sipFinal">
+                        ₹0
+                    </strong>
 
-}
+                </div>
 
+            </div>
 
 
-function resetCalculator() {
+            <div class="chart-card">
 
-    document
-        .querySelectorAll("input")
-        .forEach(function(input) {
+                <h3>
+                    Year-wise SIP Growth
+                </h3>
 
-            input.value = "";
+                <div class="chart-container">
+
+                    <canvas id="sipChart"></canvas>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================= -->
+        <!-- LUMPSUM CALCULATOR -->
+        <!-- ================================================= -->
+
+        <section
+            id="lumpsum"
+            class="calculator-section"
+        >
+
+            <div class="section-title">
+
+                <span>💵</span>
+
+                <div>
+
+                    <h2>Lumpsum Calculator</h2>
+
+                    <p>
+                        Calculate returns on a one-time investment.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="input-grid">
+
+                <div class="input-group">
+
+                    <label>One-time Investment (₹)</label>
+
+                    <input
+                        type="number"
+                        id="lumpsumAmount"
+                        placeholder="Example: 100000"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Expected Return (% per year)</label>
+
+                    <input
+                        type="number"
+                        id="lumpsumRate"
+                        step="0.1"
+                        placeholder="Example: 12"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Investment Duration (Years)</label>
+
+                    <input
+                        type="number"
+                        id="lumpsumYears"
+                        placeholder="Example: 10"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="calculate-btn"
+                onclick="calculateLumpsum()"
+            >
+                Calculate Lumpsum
+            </button>
+
+
+            <div class="result-box">
+
+                <div class="result-card">
+
+                    <span>Invested Amount</span>
+
+                    <strong id="lumpsumInvested">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span>Estimated Profit</span>
+
+                    <strong id="lumpsumProfit">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span>Final Amount</span>
+
+                    <strong id="lumpsumFinal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="chart-card">
+
+                <h3>
+                    Investment vs Profit
+                </h3>
+
+                <div class="chart-container">
+
+                    <canvas id="lumpsumChart"></canvas>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ================================================= -->
+
+    <script>
+
+        // ==========================================
+        // COMMON FUNCTIONS
+        // ==========================================
+
+        function formatMoney(value) {
+
+            return "₹" + Number(value).toLocaleString("en-IN", {
+                maximumFractionDigits: 0
+            });
+
+        }
+
+
+        // ==========================================
+        // TAB SWITCHING
+        // ==========================================
+
+        function showCalculator(id, button) {
+
+            const sections =
+                document.querySelectorAll(".calculator-section");
+
+            const buttons =
+                document.querySelectorAll(".tab-btn");
+
+
+            sections.forEach(section => {
+
+                section.classList.remove(
+                    "active-section"
+                );
+
+            });
+
+
+            buttons.forEach(btn => {
+
+                btn.classList.remove("active");
+
+            });
+
+
+            document
+                .getElementById(id)
+                .classList.add("active-section");
+
+
+            button.classList.add("active");
+
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+        // ==========================================
+        // RENT CALCULATOR
+        // ==========================================
+
+        function calculateRent() {
+
+            const rent =
+                Number(
+                    document.getElementById(
+                        "rentAmount"
+                    ).value
+                ) || 0;
+
+
+            const deposit =
+                Number(
+                    document.getElementById(
+                        "depositAmount"
+                    ).value
+                ) || 0;
+
+
+            const brokerage =
+                Number(
+                    document.getElementById(
+                        "brokerageAmount"
+                    ).value
+                ) || 0;
+
+
+            const maintenance =
+                Number(
+                    document.getElementById(
+                        "maintenanceAmount"
+                    ).value
+                ) || 0;
+
+
+            const parking =
+                Number(
+                    document.getElementById(
+                        "parkingAmount"
+                    ).value
+                ) || 0;
+
+
+            const utilities =
+                Number(
+                    document.getElementById(
+                        "utilitiesAmount"
+                    ).value
+                ) || 0;
+
+
+            const monthly =
+                rent +
+                maintenance +
+                parking +
+                utilities;
+
+
+            const yearly =
+                monthly * 12;
+
+
+            const firstMonth =
+                monthly +
+                deposit +
+                brokerage;
+
+
+            document.getElementById(
+                "monthlyRentResult"
+            ).innerText =
+                formatMoney(monthly);
+
+
+            document.getElementById(
+                "yearlyRentResult"
+            ).innerText =
+                formatMoney(yearly);
+
+
+            document.getElementById(
+                "firstMonthResult"
+            ).innerText =
+                formatMoney(firstMonth);
+
+        }
+
+
+        // ==========================================
+        // EMI CALCULATOR
+        // ==========================================
+
+        let emiChart;
+
+
+        function calculateEMI() {
+
+            const principal =
+                Number(
+                    document.getElementById(
+                        "loanAmount"
+                    ).value
+                );
+
+
+            const annualRate =
+                Number(
+                    document.getElementById(
+                        "interestRate"
+                    ).value
+                );
+
+
+            const years =
+                Number(
+                    document.getElementById(
+                        "loanTenure"
+                    ).value
+                );
+
+
+            if (
+                principal <= 0 ||
+                annualRate <= 0 ||
+                years <= 0
+            ) {
+
+                alert(
+                    "Please enter valid EMI details."
+                );
+
+                return;
+
+            }
+
+
+            const monthlyRate =
+                annualRate / 12 / 100;
+
+
+            const months =
+                years * 12;
+
+
+            const emi =
+                principal *
+                monthlyRate *
+                Math.pow(
+                    1 + monthlyRate,
+                    months
+                ) /
+                (
+                    Math.pow(
+                        1 + monthlyRate,
+                        months
+                    ) - 1
+                );
+
+
+            const totalPayment =
+                emi * months;
+
+
+            const totalInterest =
+                totalPayment - principal;
+
+
+            document.getElementById(
+                "emiResult"
+            ).innerText =
+                formatMoney(emi);
+
+
+            document.getElementById(
+                "totalInterest"
+            ).innerText =
+                formatMoney(totalInterest);
+
+
+            document.getElementById(
+                "totalPayment"
+            ).innerText =
+                formatMoney(totalPayment);
+
+
+            // Destroy old chart
+
+            if (emiChart) {
+
+                emiChart.destroy();
+
+            }
+
+
+            const ctx =
+                document.getElementById(
+                    "emiChart"
+                );
+
+
+            emiChart =
+                new Chart(ctx, {
+
+                    type: "doughnut",
+
+                    data: {
+
+                        labels: [
+                            "Principal",
+                            "Interest"
+                        ],
+
+                        datasets: [{
+
+                            data: [
+                                principal,
+                                totalInterest
+                            ]
+
+                        }]
+
+                    },
+
+                    options: {
+
+                        responsive: true,
+
+                        maintainAspectRatio: false,
+
+                        plugins: {
+
+                            legend: {
+
+                                position: "bottom"
+
+                            }
+
+                        }
+
+                    }
+
+                });
+
+        }
+
+
+        // ==========================================
+        // SIP CALCULATOR
+        // ==========================================
+
+        let sipChart;
+
+
+        function calculateSIP() {
+
+            const monthlyInvestment =
+                Number(
+                    document.getElementById(
+                        "sipAmount"
+                    ).value
+                );
+
+
+            const annualReturn =
+                Number(
+                    document.getElementById(
+                        "sipRate"
+                    ).value
+                );
+
+
+            const years =
+                Number(
+                    document.getElementById(
+                        "sipYears"
+                    ).value
+                );
+
+
+            if (
+                monthlyInvestment <= 0 ||
+                annualReturn < 0 ||
+                years <= 0
+            ) {
+
+                alert(
+                    "Please enter valid SIP details."
+                );
+
+                return;
+
+            }
+
+
+            const monthlyRate =
+                annualReturn / 12 / 100;
+
+
+            const months =
+                years * 12;
+
+
+            let finalAmount;
+
+
+            if (monthlyRate === 0) {
+
+                finalAmount =
+                    monthlyInvestment * months;
+
+            } else {
+
+                finalAmount =
+                    monthlyInvestment *
+                    (
+                        (
+                            Math.pow(
+                                1 + monthlyRate,
+                                months
+                            ) - 1
+                        ) /
+                        monthlyRate
+                    ) *
+                    (1 + monthlyRate);
+
+            }
+
+
+            const invested =
+                monthlyInvestment * months;
+
+
+            const returns =
+                finalAmount - invested;
+
+
+            document.getElementById(
+                "sipInvested"
+            ).innerText =
+                formatMoney(invested);
+
+
+            document.getElementById(
+                "sipReturns"
+            ).innerText =
+                formatMoney(returns);
+
+
+            document.getElementById(
+                "sipFinal"
+            ).innerText =
+                formatMoney(finalAmount);
+
+
+            // Year-wise chart
+
+            const labels = [];
+
+            const values = [];
+
+
+            for (
+                let year = 1;
+                year <= years;
+                year++
+            ) {
+
+                const yearMonths =
+                    year * 12;
+
+
+                let yearValue;
+
+
+                if (monthlyRate === 0) {
+
+                    yearValue =
+                        monthlyInvestment *
+                        yearMonths;
+
+                } else {
+
+                    yearValue =
+                        monthlyInvestment *
+                        (
+                            (
+                                Math.pow(
+                                    1 + monthlyRate,
+                                    yearMonths
+                                ) - 1
+                            ) /
+                            monthlyRate
+                        ) *
+                        (1 + monthlyRate);
+
+                }
+
+
+                labels.push(
+                    "Year " + year
+                );
+
+
+                values.push(
+                    Math.round(yearValue)
+                );
+
+            }
+
+
+            if (sipChart) {
+
+                sipChart.destroy();
+
+            }
+
+
+            sipChart =
+                new Chart(
+                    document.getElementById(
+                        "sipChart"
+                    ),
+                    {
+
+                        type: "bar",
+
+                        data: {
+
+                            labels: labels,
+
+                            datasets: [{
+
+                                label:
+                                    "Investment Value",
+
+                                data: values
+
+                            }]
+
+                        },
+
+                        options: {
+
+                            responsive: true,
+
+                            maintainAspectRatio: false,
+
+                            scales: {
+
+                                y: {
+
+                                    beginAtZero: true
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+                );
+
+        }
+
+
+        // ==========================================
+        // LUMPSUM CALCULATOR
+        // ==========================================
+
+        let lumpsumChart;
+
+
+        function calculateLumpsum() {
+
+            const investment =
+                Number(
+                    document.getElementById(
+                        "lumpsumAmount"
+                    ).value
+                );
+
+
+            const annualReturn =
+                Number(
+                    document.getElementById(
+                        "lumpsumRate"
+                    ).value
+                );
+
+
+            const years =
+                Number(
+                    document.getElementById(
+                        "lumpsumYears"
+                    ).value
+                );
+
+
+            if (
+                investment <= 0 ||
+                annualReturn < 0 ||
+                years <= 0
+            ) {
+
+                alert(
+                    "Please enter valid Lumpsum details."
+                );
+
+                return;
+
+            }
+
+
+            const finalAmount =
+                investment *
+                Math.pow(
+                    1 + annualReturn / 100,
+                    years
+                );
+
+
+            const profit =
+                finalAmount - investment;
+
+
+            document.getElementById(
+                "lumpsumInvested"
+            ).innerText =
+                formatMoney(investment);
+
+
+            document.getElementById(
+                "lumpsumProfit"
+            ).innerText =
+                formatMoney(profit);
+
+
+            document.getElementById(
+                "lumpsumFinal"
+            ).innerText =
+                formatMoney(finalAmount);
+
+
+            // Chart
+
+            if (lumpsumChart) {
+
+                lumpsumChart.destroy();
+
+            }
+
+
+            lumpsumChart =
+                new Chart(
+                    document.getElementById(
+                        "lumpsumChart"
+                    ),
+                    {
+
+                        type: "doughnut",
+
+                        data: {
+
+                            labels: [
+                                "Invested Amount",
+                                "Profit"
+                            ],
+
+                            datasets: [{
+
+                                data: [
+                                    investment,
+                                    profit
+                                ]
+
+                            }]
+
+                        },
+
+                        options: {
+
+                            responsive: true,
+
+                            maintainAspectRatio: false,
+
+                            plugins: {
+
+                                legend: {
+
+                                    position: "bottom"
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+                );
+
+        }
+
+
+        // ==========================================
+        // NAVBAR DROPDOWN LINKS
+        // ==========================================
+
+        document.querySelectorAll(
+            ".dropdown-content a"
+        ).forEach(link => {
+
+            link.addEventListener(
+                "click",
+                function(event) {
+
+                    event.preventDefault();
+
+
+                    const id =
+                        this.getAttribute(
+                            "href"
+                        ).substring(1);
+
+
+                    const button =
+                        document.querySelector(
+                            `.tab-btn[onclick*="'${id}'"]`
+                        );
+
+
+                    if (button) {
+
+                        showCalculator(
+                            id,
+                            button
+                        );
+
+                    }
+
+                }
+            );
 
         });
 
-
-    document.getElementById("resultBox").style.display =
-        "none";
-
-
-    /* Remove old saved data */
-
-    localStorage.removeItem("rentAnalyzerData");
-
-}
-
-</script>
-
+    </script>
 
 </body>
 

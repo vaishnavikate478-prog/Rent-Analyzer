@@ -1,649 +1,722 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Rent Analyzer - My Profile</title>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile - Rent Calculator & Analyser</title>
 
     <link rel="stylesheet" href="profile.css">
 
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<!-- ================= NAVBAR ================= -->
 
-<header class="navbar">
+<body>
 
-    <div class="logo-section">
-        <div class="logo">
+
+
+<nav class="navbar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo-area">
+
+        <div class="logo-icon">
             <i class="fa-solid fa-house"></i>
         </div>
 
-        <div>
+        <div class="logo-text">
+
             <h2>Rent Analyzer</h2>
-            <span>Smart Rent Planning</span>
+
+            <p>Smart Rent Planning</p>
+
         </div>
+
     </div>
 
-    <nav>
-        <a href="index.html" class="active">
-            <i class="fa-solid fa-house"></i> Home
+
+
+    <!-- NAVIGATION -->
+
+    <div class="nav-links">
+
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            Home
         </a>
 
         <a href="calculator.html">
             <i class="fa-solid fa-calculator"></i>
-             Calculator
-</a>
+            Calculator
+        </a>
 
-       <a href="analyzer.html" class="btn">
-    Analyze Rent
-</a>
+        <a href="analyzer.html" class="active">
+            <i class="fa-solid fa-chart-column"></i>
+            Analyzer
+        </a>
 
         <a href="history.html">
-            <i class="fa-solid fa-clock-rotate-left"></i> History
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            History
         </a>
 
         <a href="profile.html">
-            <i class="fa-solid fa-user"></i> Profile
+            <i class="fa-solid fa-user"></i>
+            Profile
         </a>
-        <a href="register.html" class="menu-item">
-                <i data-lucide="register"></i>
-                register
-            </a>
-    </nav>
 
-    <div class="auth-buttons">
+        <a href="login.html" class="login-btn">
+            Login
+        </a>
 
-    <button class="login"
-            onclick="window.location.href='login.html'">
-        Login
-    </button>
+        <a href="register.html" class="register-btn">
+            Register
+        </a>
 
-    <button class="register">
-        Register
-    </button>
+    </div>
 
-</div>
+</nav>
 
-</header>
 
-<body>
 
-<div class="app">
+<!-- ================= MAIN ================= -->
 
-    <!-- ================= SIDEBAR ================= -->
+<main class="profile-container">
 
-    <aside class="sidebar">
 
-        <div class="logo-area">
+    <!-- PAGE HEADER -->
 
-            <div class="logo-icon">
-                <i data-lucide="house"></i>
-            </div>
+    <div class="page-header">
 
-            <div>
-                <h2>Rent Analyzer</h2>
-                <p>Smart Rent Planning</p>
-            </div>
+        <div class="profile-title-icon">
+            👤
+        </div>
+
+        <div>
+
+            <h1>
+                My Profile
+            </h1>
+
+            <p>
+                Manage your profile and view your calculation activity.
+            </p>
 
         </div>
 
-
-        <nav class="menu">
-
-            <a href="#" class="menu-item">
-                <i data-lucide="house"></i>
-                Dashboard
-            </a>
-
-            <a href="calculator.html" class="menu-item">
-                <i data-lucide="calculator"></i>
-                Calculator
-            </a>
-
-            <a href="analyzer.html" class="menu-item">
-                <i data-lucide="chart-column"></i>
-                Analyzer
-            </a>
-
-            <a href="history.html" class="menu-item">
-                <i data-lucide="history"></i>
-                History
-            </a>
-
-            <a href="#" class="menu-item">
-                <i data-lucide="pie-chart"></i>
-                Reports
-            </a>
-
-            <a href="profile.html" class="menu-item active">
-                <i data-lucide="user-round"></i>
-                Profile
-            </a>
-
-            <a href="#" class="menu-item">
-                <i data-lucide="settings"></i>
-                Settings
-            </a>
-
-            <a href="#" class="menu-item">
-                <i data-lucide="headphones"></i>
-                Support
-            </a>
-           <a href="register.html" class="menu-item">
-                <i data-lucide="register"></i>
-                register
-            </a>
-        </nav>
-
-
-        <div class="logout">
-
-            <i data-lucide="power"></i>
-
-            <span>Logout</span>
-
-        </div>
-
-    </aside>
+    </div>
 
 
 
-    <!-- ================= MAIN ================= -->
+    <!-- ================= PROFILE AREA ================= -->
 
-    <main class="main">
+    <div class="profile-grid">
 
 
-        <!-- ================= TOPBAR ================= -->
+        <!-- PROFILE CARD -->
 
-        <header class="topbar">
+        <div class="profile-card">
 
-            <button class="hamburger">
+            <div class="profile-photo"
+                 id="profilePhoto">
 
-                <i data-lucide="menu"></i>
+                👤
+
+            </div>
+
+
+            <h2 id="displayName">
+                Shreya Sanap
+            </h2>
+
+
+            <p class="profile-email"
+               id="displayEmail">
+
+                shreya@gmail.com
+
+            </p>
+
+
+            <button
+                class="edit-profile-btn"
+                onclick="enableEdit()">
+
+                ✏ Edit Profile
 
             </button>
 
-
-            <div class="top-right">
-
-                <div class="notification">
-
-                    <i data-lucide="bell"></i>
-
-                    <span>3</span>
-
-                </div>
-
-
-                <div class="top-profile">
-
-                    <div class="top-avatar">
-                        
-                    </div>
-
-                    <strong></strong>
-
-                    <i data-lucide="chevron-down"></i>
-
-                </div>
-
-            </div>
-
-        </header>
+        </div>
 
 
 
-        <!-- ================= CONTENT ================= -->
+        <!-- PERSONAL INFORMATION -->
 
-        <section class="content">
+        <div class="information-card">
 
+            <div class="card-heading">
 
-            <!-- PAGE TITLE -->
+                <h2>
+                    👤 Personal Information
+                </h2>
 
-            <div class="page-title">
+                <button
+                    id="editButton"
+                    class="small-edit-btn"
+                    onclick="enableEdit()">
 
-                <h1>My Profile</h1>
+                    ✏ Edit
 
-                <div class="breadcrumb">
-
-                    <span>Dashboard</span>
-
-                    <i data-lucide="chevron-right"></i>
-
-                    <p>Profile</p>
-
-                </div>
+                </button>
 
             </div>
 
 
-
-            <!-- ================= PROFILE TOP ================= -->
-
-            <div class="profile-grid">
-
-
-                <!-- ================= LEFT PROFILE CARD ================= -->
-
-                <div class="profile-card">
-
-
-                    <div class="avatar-wrapper">
-
-                        <div class="big-avatar">
-                            
-                        </div>
-
-                        <button class="camera">
-
-                            <i data-lucide="camera"></i>
-
-                        </button>
-
-                    </div>
-
-
-                    <h2></h2>
-
-                    <p class="email">
-                        
-                    </p>
-
-
-                    <div class="premium">
-
-                        <i data-lucide="crown"></i>
-
-                        
-
-                    </div>
-
-
-                    <div class="profile-details">
-
-
-                        <div class="detail">
-
-                            <i data-lucide="calendar-days"></i>
-
-                            <span>Member Since</span>
-
-                            <strong></strong>
-
-                        </div>
-
-
-                        <div class="detail">
-
-                            <i data-lucide="phone"></i>
-
-                            <span>Phone</span>
-
-                            <strong>+91 98765 43210</strong>
-
-                        </div>
-
-
-                        <div class="detail">
-
-                            <i data-lucide="map-pin"></i>
-
-                            <span>Location</span>
-
-                            <strong>Pune, Maharashtra</strong>
-
-                        </div>
-
-
-                        <div class="detail">
-
-                            <i data-lucide="circle-check"></i>
-
-                            <span>Account Status</span>
-
-                            <b class="active-status">
-                                Active
-                            </b>
-
-                        </div>
-
-                    </div>
-
-
-                    <button class="password-btn">
-
-                        <i data-lucide="lock"></i>
-
-                        Change Password
-
-                    </button>
-
-                </div>
-
-
-
-                <!-- ================= EDIT PROFILE ================= -->
-
-                <div class="edit-card">
-
-
-                    <div class="section-heading">
-
-                        <div class="heading-icon">
-
-                            <i data-lucide="user-round-pen"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h2>Edit Profile</h2>
-
-                            <p>Update your personal information</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <form id="profileForm">
-
-
-                        <div class="form-grid">
-
-
-                            <!-- FULL NAME -->
-
-                            <div class="form-group">
-
-                                <label>Full Name</label>
-
-                                <input
-                                    
-
-                            </div>
-
-
-                            <!-- EMAIL -->
-
-                            <div class="form-group">
-
-                                <label>Email Address</label>
-
-                                <div class="input-lock">
-
-                                    <input
-                                        
-                                    >
-
-                                    <i data-lucide="lock"></i>
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- PHONE -->
-
-                            <div class="form-group">
-
-                                <label>Phone Number</label>
-
-                                <input
-                                    
-                                >
-
-                            </div>
-
-
-                            <!-- LOCATION -->
-
-                            <div class="form-group">
-
-                                <label>Location</label>
-
-                                <input
-                                    
-                                >
-
-                            </div>
-
-
-                            <!-- DOB -->
-
-                            <div class="form-group">
-
-                                <label>Date of Birth</label>
-
-                                <div class="input-icon">
-
-                                    <i data-lucide="calendar"></i>
-
-                                    <input
-                                        
-                                    >
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- GENDER -->
-
-                            <div class="form-group">
-
-                                <label>Gender</label>
-
-                                <div class="select-input">
-
-                                    <select>
-
-                                        <option></option>
-
-                                        <option></option>
-
-                                        <option></option>
-
-                                    </select>
-
-                                    <i data-lucide="chevron-down"></i>
-
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-
-
-                        <!-- ABOUT -->
-
-                        <div class="form-group about">
-
-                            <label>About You</label>
-
-                            <textarea></textarea>
-
-                        </div>
-
-
-
-                        <!-- BUTTONS -->
-
-                        <div class="form-buttons">
-
-                            <button
-                                type="button"
-                                class="cancel-btn"
-                                onclick="cancelChanges()"
-                            >
-                                Cancel
-                            </button>
-
-
-                            <button
-                                type="submit"
-                                class="save-btn"
-                            >
-
-                                <i data-lucide="save"></i>
-
-                                Save Changes
-
-                            </button>
-
-                        </div>
-
-
-                    </form>
-
-                </div>
+            <!-- NAME -->
+
+            <div class="input-row">
+
+                <label>
+                    Name
+                </label>
+
+                <input
+                    type="text"
+                    id="nameInput"
+                    value="Shreya Sanap"
+                    disabled>
 
             </div>
 
 
-
-            <!-- ================= ACCOUNT ACTIVITY ================= -->
-
-            <div class="activity-card">
-
-
-                <div class="activity-heading">
-
-                    <div class="activity-icon">
-
-                        <i data-lucide="shield-check"></i>
-
-                    </div>
-
-                    <div>
-
-                        <h2>Account Activity</h2>
-
-                        <p>Your recent account activity</p>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="activity-grid">
-
-
-                    <!-- LAST LOGIN -->
-
-                    <div class="activity-box blue">
-
-                        <div class="activity-box-icon">
-
-                            <i data-lucide="log-in"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h3>Last Login</h3>
-
-                            <p>25 May 2024, 10:30 AM</p>
-
-                            <span>Chrome on Windows</span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- ACCOUNT CREATED -->
-
-                    <div class="activity-box green">
-
-                        <div class="activity-box-icon">
-
-                            <i data-lucide="shield-check"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h3>Account Created</h3>
-
-                            <p>12 March 2024, 09:15 AM</p>
-
-                            <span>Welcome to Rent Analyzer!</span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- PASSWORD -->
-
-                    <div class="activity-box orange">
-
-                        <div class="activity-box-icon">
-
-                            <i data-lucide="lock-keyhole"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h3>Password Changed</h3>
-
-                            <p>20 April 2024, 04:45 PM</p>
-
-                            <span>Password updated successfully</span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- EMAIL -->
-
-                    <div class="activity-box purple">
-
-                        <div class="activity-box-icon">
-
-                            <i data-lucide="mail"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h3>Email Verified</h3>
-
-                            <p>12 March 2024, 09:20 AM</p>
-
-                            <span>rahulsharma@gmail.com</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
+            <!-- EMAIL -->
+
+            <div class="input-row">
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="emailInput"
+                    value="shreya@gmail.com"
+                    disabled>
 
             </div>
 
-        </section>
 
-    </main>
+            <!-- PHONE -->
 
-</div>
+            <div class="input-row">
+
+                <label>
+                    Phone
+                </label>
+
+                <input
+                    type="tel"
+                    id="phoneInput"
+                    value="9876543210"
+                    disabled>
+
+            </div>
 
 
-<script src="profile.js"></script>
+            <!-- LOCATION -->
+
+            <div class="input-row">
+
+                <label>
+                    Location
+                </label>
+
+                <input
+                    type="text"
+                    id="locationInput"
+                    value="Pune"
+                    disabled>
+
+            </div>
+
+
+            <!-- MEMBER SINCE -->
+
+            <div class="input-row">
+
+                <label>
+                    Member Since
+                </label>
+
+                <input
+                    type="text"
+                    id="memberInput"
+                    value="October 2026"
+                    disabled>
+
+            </div>
+
+
+            <!-- SAVE / CANCEL -->
+
+            <div
+                class="form-buttons"
+                id="formButtons">
+
+                <button
+                    class="save-btn"
+                    onclick="saveProfile()">
+
+                    ✓ Save Changes
+
+                </button>
+
+
+                <button
+                    class="cancel-btn"
+                    onclick="cancelEdit()">
+
+                    Cancel
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= STATISTICS ================= -->
+
+    <h2 class="statistics-heading">
+        📊 Your Statistics
+    </h2>
+
+
+    <div class="statistics-grid">
+
+
+        <!-- TOTAL -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon purple">
+                🧮
+            </div>
+
+            <div>
+
+                <h3 id="totalCalculations">
+                    0
+                </h3>
+
+                <p>
+                    Total Calculations
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- AVERAGE -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon purple">
+                ₹
+            </div>
+
+            <div>
+
+                <h3 id="averageRent">
+                    ₹0
+                </h3>
+
+                <p>
+                    Average Monthly Rent
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- HIGHEST -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon green">
+                ↗
+            </div>
+
+            <div>
+
+                <h3 id="highestRent">
+                    ₹0
+                </h3>
+
+                <p>
+                    Highest Rent
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LOWEST -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon pink">
+                ↘
+            </div>
+
+            <div>
+
+                <h3 id="lowestRent">
+                    ₹0
+                </h3>
+
+                <p>
+                    Lowest Rent
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
-    lucide.createIcons();
+
+
+/* ==========================================
+   LOAD PROFILE
+========================================== */
+
+function loadProfile() {
+
+    const profile =
+        JSON.parse(
+            localStorage.getItem("userProfile")
+        );
+
+
+    if (!profile) {
+        return;
+    }
+
+
+    document.getElementById("nameInput").value =
+        profile.name || "";
+
+
+    document.getElementById("emailInput").value =
+        profile.email || "";
+
+
+    document.getElementById("phoneInput").value =
+        profile.phone || "";
+
+
+    document.getElementById("locationInput").value =
+        profile.location || "";
+
+
+    document.getElementById("memberInput").value =
+        profile.member || "";
+
+
+    updateDisplay();
+
+}
+
+
+
+/* ==========================================
+   UPDATE PROFILE DISPLAY
+========================================== */
+
+function updateDisplay() {
+
+    document.getElementById("displayName")
+        .innerText =
+        document.getElementById("nameInput").value;
+
+
+    document.getElementById("displayEmail")
+        .innerText =
+        document.getElementById("emailInput").value;
+
+}
+
+
+
+/* ==========================================
+   ENABLE EDIT
+========================================== */
+
+function enableEdit() {
+
+    document.getElementById("nameInput")
+        .disabled = false;
+
+
+    document.getElementById("emailInput")
+        .disabled = false;
+
+
+    document.getElementById("phoneInput")
+        .disabled = false;
+
+
+    document.getElementById("locationInput")
+        .disabled = false;
+
+
+    document.getElementById("memberInput")
+        .disabled = false;
+
+
+    document.getElementById("formButtons")
+        .style.display = "flex";
+
+
+    document.getElementById("nameInput")
+        .focus();
+
+}
+
+
+
+/* ==========================================
+   SAVE PROFILE
+========================================== */
+
+function saveProfile() {
+
+    const profile = {
+
+        name:
+            document.getElementById("nameInput").value,
+
+        email:
+            document.getElementById("emailInput").value,
+
+        phone:
+            document.getElementById("phoneInput").value,
+
+        location:
+            document.getElementById("locationInput").value,
+
+        member:
+            document.getElementById("memberInput").value
+
+    };
+
+
+    localStorage.setItem(
+        "userProfile",
+        JSON.stringify(profile)
+    );
+
+
+    disableInputs();
+
+    updateDisplay();
+
+
+    alert(
+        "Profile updated successfully!"
+    );
+
+}
+
+
+
+/* ==========================================
+   CANCEL EDIT
+========================================== */
+
+function cancelEdit() {
+
+    loadProfile();
+
+    disableInputs();
+
+}
+
+
+
+/* ==========================================
+   DISABLE INPUTS
+========================================== */
+
+function disableInputs() {
+
+    document.getElementById("nameInput")
+        .disabled = true;
+
+
+    document.getElementById("emailInput")
+        .disabled = true;
+
+
+    document.getElementById("phoneInput")
+        .disabled = true;
+
+
+    document.getElementById("locationInput")
+        .disabled = true;
+
+
+    document.getElementById("memberInput")
+        .disabled = true;
+
+
+    document.getElementById("formButtons")
+        .style.display = "none";
+
+}
+
+
+
+/* ==========================================
+   LOAD STATISTICS
+========================================== */
+
+function loadStatistics() {
+
+    const history =
+        JSON.parse(
+            localStorage.getItem("rentHistory")
+        ) || [];
+
+
+    const total =
+        history.length;
+
+
+    document.getElementById(
+        "totalCalculations"
+    ).innerText = total;
+
+
+    if (total === 0) {
+
+        document.getElementById(
+            "averageRent"
+        ).innerText = "₹0";
+
+
+        document.getElementById(
+            "highestRent"
+        ).innerText = "₹0";
+
+
+        document.getElementById(
+            "lowestRent"
+        ).innerText = "₹0";
+
+        return;
+
+    }
+
+
+    const rents =
+        history.map(
+            item => Number(item.rent)
+        );
+
+
+    const totalRent =
+        rents.reduce(
+            (sum, rent) => sum + rent,
+            0
+        );
+
+
+    const average =
+        totalRent / rents.length;
+
+
+    const highest =
+        Math.max(...rents);
+
+
+    const lowest =
+        Math.min(...rents);
+
+
+    document.getElementById(
+        "averageRent"
+    ).innerText =
+        "₹" + formatNumber(average);
+
+
+    document.getElementById(
+        "highestRent"
+    ).innerText =
+        "₹" + formatNumber(highest);
+
+
+    document.getElementById(
+        "lowestRent"
+    ).innerText =
+        "₹" + formatNumber(lowest);
+
+}
+
+
+
+/* ==========================================
+   NUMBER FORMAT
+========================================== */
+
+function formatNumber(number) {
+
+    return Number(number).toLocaleString(
+        "en-IN",
+        {
+            maximumFractionDigits: 0
+        }
+    );
+
+}
+
+
+
+/* ==========================================
+   PAGE LOAD
+========================================== */
+
+loadProfile();
+
+loadStatistics();
+
+disableInputs();
+
 </script>
 
+
 </body>
+
 </html>
